@@ -1,4 +1,8 @@
-# Padavan-CAKE <p align="right"><a href="README_TW.md">繁體中文</a> | 简体中文 | <a href="README.md">English</a></p>
+# Padavan-CAKE
+
+<div align="right">
+  <a href="README_TW.md">繁體中文</a> | 简体中文 | <a href="README.md">English</a>
+</div>
 
 ## 🏆全球首发！
 

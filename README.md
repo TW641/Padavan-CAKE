@@ -3,6 +3,8 @@
 ## 🏆 🇹🇼 World Premiere! Taiwan No.1! 🇹🇼
 
 ## 🚀 Improve Network Latency! TW641 Ported CAKE (sch_cake) Padavan Router Firmware: Cloud Compilation Guide (Supports 142 Models)
+
+**繁體中文版本，請見：[https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875605](https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875605)**
  
 👉 **Previous Firmware Release, Test Results & Flashing Guide:** [Firmware Release] [Padavan + CAKE Port] TP-Link Archer C2 V1 (with 3.4.113 Linux Kernel) & Phicomm K2P A1/A2 (with 4.4.198 Linux Kernel)
 [https://www.mobile01.com/topicdetail.php?f=110&t=7220226](https://www.mobile01.com/topicdetail.php?f=110&t=7220226)

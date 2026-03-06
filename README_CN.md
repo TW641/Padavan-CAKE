@@ -60,11 +60,14 @@
 
 <a href="images/Tomato-Phoenix-Archive.png" target="_blank"><img style="max-width: 100%; height: auto; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/Tomato-Phoenix-Archive.png" alt="Tomato Phoenix 繁体中文版历史截图"></a>
 
-请看下方图片！这是我当年和陆明峰、佐须之男合作时，他亲手写的感谢纸条和送的礼物。我直到今天都还留着，而且这些感谢如今都仍记在心里！
+请看下方图片！这是我当年和陆明峰、佐须之男合作时，他亲手写的感谢纸条和送的礼物。
+
+我直到今天都还留着，而且这些感谢如今都仍记在心里！
 
 <a href="images/ForgotFun.jpg" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/ForgotFun.jpg" alt="佐须之男的感谢纸条"></a>
 
 **🤝 支持佐须之男 (ForgotFun)：**
+
 这不是我的账号，但就让我们一起帮他一把吧，感谢他多年来的开源贡献。如果您想支持他，请前往他的官方网站了解支持方式：
 
 <https://www.tomato.org.cn/donate-us.html>
@@ -74,6 +77,7 @@
 > *「佐须之男长期致力于国内第三方免费固件的开发，期间靠的是广大用户的支持才能坚持到现在。一路走来的过程中有喝彩也有唏嘘，但我从未停止过脚步，并希望我能继续再坚持下去。希望广大的用户在力所能及的前提下能给予我些赞助，让这份梦想得以延续。」*
 
 顺带一提，最近在论坛看到有版友发帖问：恩山为什么没有gl-inet版块？( <https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=8463592&fromuid=1047490&fromuser=TW641> )
+
 借着这篇技术分享，我也想在此向管理员许愿：**强烈希望能开立一个 GL.iNet 专属板块！** 这样大家讨论相关技术跟固件会更方便集中！
 
 ---

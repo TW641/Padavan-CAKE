@@ -23,10 +23,17 @@
       name: 'Padavan-CAKE 專案',   // 左上角顯示的網站名稱
       repo: 'TW641/Padavan-CAKE', // 右上角會出現連結到你 GitHub 的掛件
       
-      // 【關鍵設定】：這裡設定它預設去抓取哪一個檔案當作首頁
-      // 如果你的繁體中文檔名是 README_TW.md 就填這個，如果是 README.md 就改掉
+      // 1. 設定首頁檔名
       homepage: 'README_TW.md', 
       
+      // 2. 【核心修正】：增加路徑別名
+      // 這能確保 Docsify 點擊連結時，能正確分辨根目錄與檔案之間的關係
+      alias: {
+        '/README': '/README.md',
+        '/README_CN': '/README_CN.md',
+        '/README_TW': '/README_TW.md'
+      },
+
       auto2top: true,     // 點擊目錄後自動捲動到最上面
       maxLevel: 3,        // 抓取 Markdown 標題生成目錄的最大層級
       subMaxLevel: 2      // 側邊欄目錄展開的層級

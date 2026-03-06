@@ -19,28 +19,33 @@
   <div id="app">網頁載入中，請稍候... (Loading...)</div>
 
   <script>
-    window.$docsify = {
-      name: 'Padavan-CAKE 專案',
-      repo: 'TW641/Padavan-CAKE',
-      
-      // 1. 不要用 homepage 指定檔案，讓它預設找 README.md
-      // 2. 利用 alias 功能，把預設的 README.md 指向到你的繁體中文檔案
-      alias: {
-        '/': 'README_TW.md',           // 進站預設顯示繁中
-        '/README': 'README.md',       // 強制指定路徑對應
-        '/README_CN': 'README_CN.md',
-        '/README_TW': 'README_TW.md'
-      },
+        window.$docsify = {
+            name: 'Padavan-CAKE 專案',
+            repo: 'TW641/Padavan-CAKE',
+            
+            // 終極路由防護網：無差別攔截所有可能的路徑，防止 404
+            alias: {
+                // 捕捉帶有 .md 的標準寫法
+                '.*?/README_TW.md': '/README_TW.md',
+                '.*?/README_CN.md': '/README_CN.md',
+                '.*?/README.md': '/README.md',
+                
+                // 兼容沒有附檔名的舊寫法（防呆）
+                '.*?/README_TW': '/README_TW.md',
+                '.*?/README_CN': '/README_CN.md',
+                '.*?/README': '/README.md',
+                
+                // 預設首頁
+                '/': '/README_TW.md'
+            },
 
-      auto2top: true,
-      maxLevel: 3,
-      subMaxLevel: 2,
-      
-      // 加上這行可以防止某些瀏覽器緩存問題
-      loadNavbar: false,
-      loadSidebar: false
-    }
-  </script>
+            auto2top: true,
+            maxLevel: 3,
+            subMaxLevel: 2,
+            loadNavbar: false,
+            loadSidebar: false
+        }
+    </script>
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>

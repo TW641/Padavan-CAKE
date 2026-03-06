@@ -42,6 +42,7 @@
 
 * **🏢 企业与组织：**
     * GL.iNet 深圳市广联智通科技有限公司 ( <https://www.gl-inet.cn/> )
+    * GL.iNet GL Technologies (Hong Kong) Limited ( <https://www.gl-inet.com/> )
     * LibreQoS LibreQoE, LLC ( <https://libreqos.io/> )
 * **💻 开发者与贡献者：**
     * Alfie Zhao

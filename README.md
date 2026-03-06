@@ -44,16 +44,16 @@ My GitHub project successfully gained the attention and approval of **Frantisek 
 * **🇹🇼🤝🇯🇵 Cross-Border Attention from Top Japanese Network Scholar:**
 Dr. Dikshie from **Keio University**, a top university in Japan, also paid attention to and endorsed **this project**! Dr. Dikshie specializes in P2P networks, internet architecture, and network science. Receiving such recognition from a heavyweight scholar who excels in underlying network infrastructure proves that the technical value of this algorithm porting is extremely high!
 
-<a href="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" alt="GitHub Endorsement Proof"></a>
+<a href="images/followers.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/followers.png" alt="GitHub Endorsement Proof"></a>
 
 *[Image: Personal tracking and endorsement from LibreQoS COO and a top scholar from Keio University]*
 
 * **🇹🇼 Presidential-level Digital Diplomacy:**
 LibreQoS officially published a **tribute post** on international social platforms like X (Twitter), Facebook, and LinkedIn, praising **this project** as a **"Time-Traveling Valentine's Gift"** for Dave Täht, and unprecedentedly tagged the **President of Taiwan, Lai Ching-te, former President Tsai Ing-wen, and the Presidential Office Spokesperson**! Bringing Taiwan's open-source technical contributions to the international stage is true citizen diplomacy in action! 🇹🇼
 
-<a href="https://attach.mobile01.com/attach/202603/mobile01-caa3b86d4fd6ed823cb7a94c74f13d5b.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-caa3b86d4fd6ed823cb7a94c74f13d5b.png" alt="LibreQoS FB Post"></a>
-<a href="https://attach.mobile01.com/attach/202603/mobile01-0097de290de9f015a3dc63bdc9f7af13.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-0097de290de9f015a3dc63bdc9f7af13.png" alt="LibreQoS X Post"></a>
-<a href="https://attach.mobile01.com/attach/202603/mobile01-094fa91ac26e8bc5a568e1f0dae9f1af.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-094fa91ac26e8bc5a568e1f0dae9f1af.png" alt="LibreQoS LinkedIn Post"></a>
+<a href="images/Facebook.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/Facebook.png" alt="LibreQoS Facebook Post"></a>
+<a href="images/X.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/X.png" alt="LibreQoS X Post"></a>
+<a href="images/LinkedIn.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/LinkedIn.png" alt="LibreQoS LinkedIn Post"></a>
 
 *[Image: LibreQoS official tribute posts across Facebook, X, and LinkedIn]*
 
@@ -68,7 +68,7 @@ If you also feel passionate about this "digital diplomacy," please take 10 secon
 ---
 
 ## 🕊️ In Loving Memory of Dave Täht (The Soul of Bufferbloat Mitigation)
-<a href="https://attach.mobile01.com/attach/202603/mobile01-4cd892c2e90538884a833c149b84b26e.jpg" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-4cd892c2e90538884a833c149b84b26e.jpg" alt="Dave Täht Tribute"></a>
+<a href="images/davetaht.jpg" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/davetaht.jpg" alt="Dave Täht Tribute"></a>
 
 *[Image Source: LibreQoS]*
 
@@ -76,7 +76,8 @@ If you also feel passionate about this "digital diplomacy," please take 10 secon
 >
 > — *A tribute to the soul of bufferbloat mitigation.*
 
-### **🇹🇼: 他的心願，我來實現 (Tā de xīn yuàn, wǒ lái shí xiàn)** ### **🇺🇸: His wish, I finished.** Dave Täht (1965–2025) was a great open-source contributor in network technology. He turned down countless high-paying contracts just to keep his code free and open-source. Because of his research in the Bufferbloat field, countless devices today enjoy smooth networking.
+### **🇹🇼: 他的心願，我來實現 (Tā de xīn yuàn, wǒ lái shí xiàn)** 
+### **🇺🇸: His wish, I finished.** Dave Täht (1965–2025) was a great open-source contributor in network technology. He turned down countless high-paying contracts just to keep his code free and open-source. Because of his research in the Bufferbloat field, countless devices today enjoy smooth networking.
 
 **🏹 A Coincidence Across Time: Archer and Arrow**
 
@@ -111,7 +112,7 @@ Built on the mature foundation of fq_codel, CAKE is a state-of-the-art Active Qu
 The name originates from the movie "2010" and the game "Portal", representing the beautiful vision that everyone gets a piece of the cake. It actually stands for Common Applications Kept Enhanced. Simply put, it ensures that when multiple people use the network, everyone still gets bandwidth, keeping things smooth and stutter-free.
 
 ### ⚙️ Quick Guide to How It Works
-<a href="https://attach.mobile01.com/attach/202601/mobile01-cc47f34c6f679b2530f27cfb39a15e79.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202601/mobile01-cc47f34c6f679b2530f27cfb39a15e79.png"></a>
+<a href="images/CAKE.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/CAKE.png"></a>
 CAKE's primary goal is to eliminate Bufferbloat.
 
 **Its Core Features:**
@@ -122,10 +123,10 @@ CAKE's primary goal is to eliminate Bufferbloat.
 ⚠️ **Note:** CAKE is relatively CPU-intensive. It may become a performance bottleneck on weaker routers when handling bandwidths over 350 Mbps.
 
 ### 🔍 How to Verify CAKE is Running Perfectly
-<a href="https://attach.mobile01.com/attach/202601/mobile01-b5e4cbd1e19664292a4cde6f18f76643.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202601/mobile01-b5e4cbd1e19664292a4cde6f18f76643.png"></a>
-<a href="https://attach.mobile01.com/attach/202601/mobile01-2c3cfa3cbf34801d236e44fef8fdf531.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202601/mobile01-2c3cfa3cbf34801d236e44fef8fdf531.png"></a>
-<a href="https://attach.mobile01.com/attach/202601/mobile01-708ae7ff3f29f1ad1f3e6717b498f47d.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202601/mobile01-708ae7ff3f29f1ad1f3e6717b498f47d.png"></a>
-<a href="https://attach.mobile01.com/attach/202601/mobile01-a7bacdaf7231961625d5cfe2b20b0216.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202601/mobile01-a7bacdaf7231961625d5cfe2b20b0216.png"></a>
+<a href="images/VerifyCAKE1.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE1.png"></a>
+<a href="images/VerifyCAKE2.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE2.png"></a>
+<a href="images/VerifyCAKE3.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE3.png"></a>
+<a href="images/VerifyCAKE4.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE4.png"></a>
 
 ---
 

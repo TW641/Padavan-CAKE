@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>TW641 | Padavan-CAKE 雲端編譯懶人包</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
+
+  <style>
+    /* 稍微優化一下表格在網頁上的顯示，讓你的 142 款機型表格更好看 */
+    .markdown-section table { display: table; width: 100%; }
+    .markdown-section td, .markdown-section th { word-break: break-word; }
+  </style>
+</head>
+<body>
+  <div id="app">網頁載入中，請稍候... (Loading...)</div>
+
+  <script>
+    window.$docsify = {
+      name: 'Padavan-CAKE 專案',   // 左上角顯示的網站名稱
+      repo: 'TW641/Padavan-CAKE', // 右上角會出現連結到你 GitHub 的掛件
+      
+      // 【關鍵設定】：這裡設定它預設去抓取哪一個檔案當作首頁
+      // 如果你的繁體中文檔名是 README_TW.md 就填這個，如果是 README.md 就改掉
+      homepage: 'README_TW.md', 
+      
+      auto2top: true,     // 點擊目錄後自動捲動到最上面
+      maxLevel: 3,        // 抓取 Markdown 標題生成目錄的最大層級
+      subMaxLevel: 2      // 側邊欄目錄展開的層級
+    }
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+</body>
+</html>

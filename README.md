@@ -1,8 +1,6 @@
-# Padavan-CAKE 
+# Padavan-CAKE
 
-<div align="right">
-  <a href="README_TW.md">繁體中文</a> | <a href="README_CN.md">简体中文</a> | English
-</div>
+> [繁體中文](README_TW.md) | [简体中文](README_CN.md) | English
 
 ## 🏆 🇹🇼 World Premiere! Taiwan No.1! 🇹🇼
 

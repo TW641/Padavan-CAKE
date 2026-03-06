@@ -4,9 +4,14 @@
 
 ## 🚀 Improve Network Latency! TW641 Ported CAKE (sch_cake) Padavan Router Firmware: Cloud Compilation Guide (Supports 142 Models)
 
+**For English version, please visit: [https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875608](https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875608)**
+
 **繁體中文版本，請見：[https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875605](https://www.mobile01.com/topicdetail.php?f=110&t=7231531#92875605)**
  
-👉 **Previous Firmware Release, Test Results & Flashing Guide:** [Firmware Release] [Padavan + CAKE Port] TP-Link Archer C2 V1 (with 3.4.113 Linux Kernel) & Phicomm K2P A1/A2 (with 4.4.198 Linux Kernel)
+👉 **Previous Firmware Release, Test Results & Flashing Guide:** 
+
+[Firmware Release] [Padavan + CAKE Port] TP-Link Archer C2 V1 (with 3.4.113 Linux Kernel) & Phicomm K2P A1/A2 (with 4.4.198 Linux Kernel)
+
 [https://www.mobile01.com/topicdetail.php?f=110&t=7220226](https://www.mobile01.com/topicdetail.php?f=110&t=7220226)
 
 This is my independent project and the world's first successful port of the **CAKE traffic control algorithm** to Padavan (including both Linux Kernel 3.4.113 and Linux Kernel 4.4.198)!
@@ -22,7 +27,9 @@ Not only have I resurrected the classic TP-Link Archer C2 and Phicomm K2P, but I
 * **Security Enhancements:** Fully upgraded Busybox to 1.37.0, fixing multiple high-risk CVE vulnerabilities.
 
 *(Note: My previous older projects were hosted under my old account TWShiyuLiou1997. Now, all successful builds are centralized in the new **TW641** account. Please refer to the new repository's Actions! If you find this project helpful, please click the link below to **Follow** my GitHub account for support and encouragement!)*
+
 👉 My New GitHub Profile (TW641): [https://github.com/TW641](https://github.com/TW641)
+
 👉 My Old GitHub Profile (TWShiyuLiou1997): [https://github.com/TWShiyuLiou1997](https://github.com/TWShiyuLiou1997)
 
 ---
@@ -37,7 +44,8 @@ My GitHub project successfully gained the attention and approval of **Frantisek 
 * **🇹🇼🤝🇯🇵 Cross-Border Attention from Top Japanese Network Scholar:**
 Dr. Dikshie from **Keio University**, a top university in Japan, also paid attention to and endorsed **this project**! Dr. Dikshie specializes in P2P networks, internet architecture, and network science. Receiving such recognition from a heavyweight scholar who excels in underlying network infrastructure proves that the technical value of this algorithm porting is extremely high!
 
-<a href="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" alt="GitHub Endorsement Proof"></a> 
+<a href="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-4828273f1d930d284777118fcb91f2b5.png" alt="GitHub Endorsement Proof"></a>
+
 *[Image: Personal tracking and endorsement from LibreQoS COO and a top scholar from Keio University]*
 
 * **🇹🇼 Presidential-level Digital Diplomacy:**
@@ -46,18 +54,22 @@ LibreQoS officially published a **tribute post** on international social platfor
 <a href="https://attach.mobile01.com/attach/202603/mobile01-caa3b86d4fd6ed823cb7a94c74f13d5b.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-caa3b86d4fd6ed823cb7a94c74f13d5b.png" alt="LibreQoS FB Post"></a>
 <a href="https://attach.mobile01.com/attach/202603/mobile01-0097de290de9f015a3dc63bdc9f7af13.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-0097de290de9f015a3dc63bdc9f7af13.png" alt="LibreQoS X Post"></a>
 <a href="https://attach.mobile01.com/attach/202603/mobile01-094fa91ac26e8bc5a568e1f0dae9f1af.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-094fa91ac26e8bc5a568e1f0dae9f1af.png" alt="LibreQoS LinkedIn Post"></a>
+
 *[Image: LibreQoS official tribute posts across Facebook, X, and LinkedIn]*
 
 **👇 Need Your Support! Let the World See Taiwan's Contribution! 👇**
 If you also feel passionate about this "digital diplomacy," please take 10 seconds to click the official LibreQoS social post links below to **Like, Comment, and Share**! Let this transnational tribute from Taiwan be spread to the whole world:
 * 👉 **X (Twitter) Post:** [https://x.com/LibreQoS/status/2022688823361126545](https://x.com/LibreQoS/status/2022688823361126545)
+
 * 👉 **Facebook Post:** [https://www.facebook.com/libreqos/posts/pfbid02JCNKynFeQ48FdBMFbVoAoWFDLfgiA55mH3Fyz76xKHdEU86XkxgVziWzXoRYbbT1l](https://www.facebook.com/libreqos/posts/pfbid02JCNKynFeQ48FdBMFbVoAoWFDLfgiA55mH3Fyz76xKHdEU86XkxgVziWzXoRYbbT1l)
+
 * 👉 **LinkedIn Post:** [https://www.linkedin.com/posts/libreqos_davetaht-routers-bufferbloat-activity-7428458742301659136-YAL2](https://www.linkedin.com/posts/libreqos_davetaht-routers-bufferbloat-activity-7428458742301659136-YAL2) 
 
 ---
 
 ## 🕊️ In Loving Memory of Dave Täht (The Soul of Bufferbloat Mitigation)
 <a href="https://attach.mobile01.com/attach/202603/mobile01-4cd892c2e90538884a833c149b84b26e.jpg" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://attach.mobile01.com/attach/202603/mobile01-4cd892c2e90538884a833c149b84b26e.jpg" alt="Dave Täht Tribute"></a>
+
 *[Image Source: LibreQoS]*
 
 > **"When you miss Dave, modprobe sch_cake!"**
@@ -87,6 +99,7 @@ Years later, through **this project**, I've enabled thousands of MT76 devices to
 Dave's surname **"Täht"** means **"Star"** in Estonian. If you use my firmware, please go to the GitHub open-source memorial repository and light up that "Star" for me to continue Dave Täht's spirit!
  
 * 👉 Open Source Port Code & Memorial Repository: [https://github.com/TW641/sch_cake](https://github.com/TW641/sch_cake)
+
 * 👉 Read the full memorial article for Dave Täht (LibreQoS): [https://libreqos.io/2025/04/01/in-loving-memory-of-dave/](https://libreqos.io/2025/04/01/in-loving-memory-of-dave/)
 
 ---

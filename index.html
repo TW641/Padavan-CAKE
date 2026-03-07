@@ -39,7 +39,7 @@
     body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
 
-    /* 徹底消滅 CLS：強制顯示垂直卷軸，防止載入完成瞬間卷軸出現導致畫面往左擠 0.279 的版面位移 */
+    /* 徹底消滅 CLS：強制顯示垂直卷軸，防止載入完成瞬間卷軸出現導致畫面往左擠 */
     html, body { overflow-y: scroll !important; }
     .progress { display: none !important; }
     #app { min-height: 100vh; padding-top: 20px; }
@@ -48,7 +48,7 @@
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
     
-    /* 確保圖片不跳動 (移除了 content-visibility 防止某些情況下觸發無效重排) */
+    /* 確保圖片不跳動 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
     
     /* 魔法 CSS 1：雙排並列 */
@@ -96,21 +96,18 @@
         loadNavbar: false,
         loadSidebar: false,
 
-        // 終極無障礙修復 (攔截純文字節點，保證不觸發重排)
         plugins: [
             function(hook, vm) {
                 hook.afterEach(function(html, next) {
                     var parser = new DOMParser();
                     var doc = parser.parseFromString(html, 'text/html');
                     
+                    // 任務 1：終極無障礙修復 (攔截純文字節點，保證 100 分且不觸發重排)
                     var lists = doc.querySelectorAll('ul, ol');
                     lists.forEach(function(list) {
-                        // 使用 childNodes 才能抓到裸露的「純文字」
                         var nodes = Array.from(list.childNodes);
                         nodes.forEach(function(node) {
-                            // 判斷 1：如果是純文字，且不是只有空白或換行
                             var isTextNode = (node.nodeType === 3 && node.nodeValue.trim() !== '');
-                            // 判斷 2：如果是 HTML 標籤，但不是 li, script, template
                             var isInvalidElement = (node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase()));
                             
                             if (isTextNode || isInvalidElement) {
@@ -119,6 +116,15 @@
                                 wrapper.appendChild(node);
                             }
                         });
+                    });
+
+                    // 任務 2：圖片效能黑科技 (不動實體圖片，改用非同步懶載入)
+                    var images = doc.querySelectorAll('img');
+                    images.forEach(function(img) {
+                        // 讓螢幕外的圖片延遲下載，大幅提升初始載入速度
+                        img.setAttribute('loading', 'lazy');
+                        // 背景非同步解碼，避免大圖片卡住瀏覽器主執行緒 (解決 TBT 延遲)
+                        img.setAttribute('decoding', 'async');
                     });
                     
                     // 將完美的 HTML 字串交還給 Docsify

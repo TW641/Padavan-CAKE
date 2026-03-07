@@ -61,7 +61,7 @@
 
 <http://pan.baidu.com/s/1jIGpbQe>
 
-<a href="images/Tomato-Phoenix-Archive.png" target="_blank"><img style="max-width: 100%; height: auto; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/davetaht.jpg" width="3024" height="4032" alt="Tomato Phoenix 繁体中文版历史截图"></a>
+<a href="images/Tomato-Phoenix-Archive.png" target="_blank"><img style="max-width: 100%; height: auto; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/Tomato-Phoenix-Archive.png" width="3840" height="2160" alt="Tomato Phoenix 繁体中文版历史截图"></a>
 
 请看下方图片！这是我当年和陆明峰、佐须之男合作时，他亲手写的感谢纸条和送的礼物。
 

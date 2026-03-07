@@ -45,15 +45,18 @@
 
 * **🇹🇼🤝🇯🇵 來自日本的頂尖網路學者的跨國關注：**
     來自日本頂尖名校 **慶應義塾大學 (Keio University) 的 Dikshie 博士** 也親自給予**此專案**關注與認可！Dikshie 博士專攻 P2P 網路、網際網路架構與網路科學，能獲得這類精於底層網路基礎設施的重量級學者肯定，證明了這份演算法移植的技術含金量極高！
-  
+    
     <a href="images/followers.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/followers.png" width="3818" height="1499" alt="GitHub 大神追蹤證明"></a>
 
     *[圖說：來自捷克 LibreQoS 營運長與日本慶應大學頂尖學者的親自追蹤認可]*
 
 * **🇹🇼 總統級的數位國民外交：**
     LibreQoS 官方甚至在 X (Twitter)、Facebook 與 LinkedIn 等國際社群平台上發布**貼文致敬**，將**這個專案**譽為給 Dave Täht 的 **"Time-Traveling Valentine's Gift" (穿越時空的情人節禮物)**，並在文中史無前例地標註了**台灣總統賴清德、前總統蔡英文與總統府發言人**！能讓台灣的開源技術貢獻躍上國際版面，這真的是貨真價實的國民外交！🇹🇼
+    
     <a href="images/Facebook.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/Facebook.png" width="1107" height="1744" alt="LibreQoS Facebook 貼文"></a>
+    
     <a href="images/X.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/X.png" width="902" height="1350" alt="LibreQoS X 貼文"></a>
+    
     <a href="images/LinkedIn.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/LinkedIn.png" width="947" height="1376" alt="LibreQoS LinkedIn 貼文"></a>
   
     *[圖說：LibreQoS 官方於 Facebook、X 與 LinkedIn 三大平台同步發文致敬]*
@@ -134,8 +137,11 @@ CAKE 最主要的目標是消除 Bufferbloat（緩衝膨脹）。
 ### 🔍 怎麼確認 CAKE 完美運行
 
 <a href="images/VerifyCAKE1.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE1.png" width="3816" height="1907" alt="圖1"></a>
-<a href="images/VerifyCAKE2.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE2.png" width="3816" height="1907" width="3816" height="1907" alt="圖2"></a>
+
+<a href="images/VerifyCAKE2.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE2.png" width="3816" height="1907" alt="圖2"></a>
+
 <a href="images/VerifyCAKE3.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE3.png" width="3816" height="1907" alt="圖3"></a>
+
 <a href="images/VerifyCAKE4.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE4.png" width="3816" height="1907" alt="圖4"></a>
 
 ---

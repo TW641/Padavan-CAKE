@@ -98,37 +98,34 @@
 
         plugins: [
             function(hook, vm) {
-                hook.afterEach(function(html, next) {
-                    var parser = new DOMParser();
-                    var doc = parser.parseFromString(html, 'text/html');
-                    
-                    // 任務 1：終極無障礙修復 (攔截純文字節點，保證 100 分且不觸發重排)
-                    var lists = doc.querySelectorAll('ul, ol');
+                // 使用 doneEach：在網頁完全生成（包含 Docsify 的側邊目錄）後立刻掃描
+                hook.doneEach(function() {
+                    // 任務 1：修復包含「自動目錄」在內的所有非法清單（完全同步，無時間差）
+                    var lists = document.querySelectorAll('ul, ol');
                     lists.forEach(function(list) {
                         var nodes = Array.from(list.childNodes);
                         nodes.forEach(function(node) {
+                            // 抓出純文字節點 (nodeType 3)
                             var isTextNode = (node.nodeType === 3 && node.nodeValue.trim() !== '');
+                            // 抓出非 <li> 的 HTML 標籤 (nodeType 1)
                             var isInvalidElement = (node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase()));
                             
                             if (isTextNode || isInvalidElement) {
-                                var wrapper = doc.createElement('li');
+                                var wrapper = document.createElement('li');
                                 list.insertBefore(wrapper, node);
                                 wrapper.appendChild(node);
                             }
                         });
                     });
 
-                    // 任務 2：圖片效能黑科技 (不動實體圖片，改用非同步懶載入)
-                    var images = doc.querySelectorAll('img');
+                    // 任務 2：圖片效能優化 (不改原檔，透過 HTML 屬性榨出效能)
+                    var images = document.querySelectorAll('img');
                     images.forEach(function(img) {
-                        // 讓螢幕外的圖片延遲下載，大幅提升初始載入速度
-                        img.setAttribute('loading', 'lazy');
-                        // 背景非同步解碼，避免大圖片卡住瀏覽器主執行緒 (解決 TBT 延遲)
-                        img.setAttribute('decoding', 'async');
+                        if (!img.hasAttribute('loading')) {
+                            img.setAttribute('loading', 'lazy'); // 不在畫面內的先不要載
+                            img.setAttribute('decoding', 'async'); // 在背景默默解碼，不卡頓
+                        }
                     });
-                    
-                    // 將完美的 HTML 字串交還給 Docsify
-                    next(doc.body.innerHTML);
                 });
             }
         ]

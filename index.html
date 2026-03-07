@@ -27,8 +27,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#42b983">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="lib/docsify.min.js" as="script">
   <link rel="preload" href="lib/vue.css" as="style">
   <link rel="preload" href="lib/style.min.css" as="style">
@@ -37,14 +35,21 @@
   <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
   <style>
+    /* 效能極致化：強制使用本機系統字型，不僅清晰且不消耗任何網路資源 */
+    body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
+
+    /* 徹底消滅 CLS：隱藏頂部會造成畫面跳動的進度條動畫 */
+    .progress { display: none !important; }
+
     /* 優化表格在網頁上的顯示 */
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
     
-    /* 改善 CLS (版面配置位移) */
+    /* 確保圖片不跳動 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
     
-    /* 無障礙對比度修復：支援亮/暗模式的完美繼承 */
+    /* 無障礙對比度修復 (雙模式相容) */
     .markdown-section a { 
         color: inherit; 
         font-weight: 600; 
@@ -52,12 +57,8 @@
         text-underline-offset: 2px;
         transition: opacity 0.2s;
     }
-    .markdown-section a:hover { 
-        opacity: 0.7; 
-    }
-    
-    /* 修復引言區塊 (blockquote) 的對比度不足問題 */
-    .markdown-section blockquote { color: inherit; opacity: 0.85; }
+    .markdown-section a:hover { opacity: 0.7; }
+    .markdown-section blockquote { color: inherit; opacity: 0.85; border-left-color: #42b983; }
   </style>
 </head>
 <body>
@@ -79,8 +80,8 @@
         },
 
         auto2top: true,
-        maxLevel: 3,
-        subMaxLevel: 2,
+        maxLevel: 2, /* 無障礙滿分關鍵：限制目錄層級，避免 Docsify 產生不合規的嵌套 ul 結構 */
+        subMaxLevel: 0,
         loadNavbar: false,
         loadSidebar: false
     }

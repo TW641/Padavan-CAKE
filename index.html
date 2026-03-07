@@ -49,6 +49,39 @@
     /* 確保圖片不跳動 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
     
+    /* 魔法 CSS 1：雙排並列 (適合 4 張測試圖) */
+    .image-grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* 魔法 CSS 2：三排並列 (適合 3 張社群貼文截圖) */
+    .image-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* 讓網格內的圖片統一風格，消除底部多餘空白 */
+    .image-grid-2 img, .image-grid-3 img { 
+        margin-bottom: 0 !important; 
+        border: 1px solid #ccc; 
+        border-radius: 8px; 
+        width: 100%; 
+        height: auto; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 加一點點陰影更有質感 */
+    }
+
+    /* 手機版自適應：螢幕小於 768px 時，全部自動變成單排垂直顯示 */
+    @media (max-width: 768px) {
+        .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; }
+    }
+    
     /* 無障礙對比度修復 (雙模式相容) */
     .markdown-section a { 
         color: inherit; 

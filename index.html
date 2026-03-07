@@ -31,21 +31,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <link rel="preload" href="lib/docsify.min.js" as="script">
+  <link rel="preload" href="lib/vue.css" as="style">
 
   <link rel="stylesheet" href="lib/vue.css">
   <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
   <style>
-    /* 稍微優化一下表格在網頁上的顯示 */
+    /* 優化表格在網頁上的顯示，讓 142 款機型表格更好看 */
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
     
     /* 改善 CLS (版面配置位移)：給圖片預設顯示行為 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
     
-    /* 無障礙滿分關鍵：強制提升超連結文字的對比度 */
-    .markdown-section a { color: #0550ae; font-weight: 600; text-decoration: underline; }
-    #docsify-darklight-theme.dark .markdown-section a { color: #79c0ff; }
+    /* 無障礙滿分關鍵：強制提升超連結文字的對比度，符合 WCAG AAA 標準 */
+    .markdown-section a { color: #0056b3; font-weight: 600; text-decoration: underline; } /* 淺色模式：深藍色 */
+    #docsify-darklight-theme.dark .markdown-section a { color: #8ab4f8; } /* 深色模式：淺藍色 */
+    
+    /* 修正 Docsify 主題預設文字對比度問題 */
+    body { color: #24292e; } /* 淺色模式主要文字加深 */
+    #docsify-darklight-theme.dark body { color: #e1e4e8; } /* 深色模式主要文字調亮 */
   </style>
 </head>
 <body>
@@ -56,6 +61,7 @@
         name: 'Padavan-CAKE 專案',
         repo: 'TW641/Padavan-CAKE',
         
+        // 終極路由防護網：無差別攔截所有可能的路徑，防止 404
         alias: {
             '.*?/README_TW.md': '/README_TW.md',
             '.*?/README_CN.md': '/README_CN.md',

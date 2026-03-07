@@ -5,7 +5,7 @@
   <title>TW641 | Padavan-CAKE 雲端編譯懶人包</title>
   
   <meta name="description" content="TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。">
-  <meta name="keywords" content="Padavan, CAKE, SQM, Bufferbloat, 路由器, 韌體, 開源, 雲端編譯, TW641, sch_cake, mobile01, ptt, 恩山, 刷機, 老毛子, K2P, DIR-878, MI-R3G">
+  <meta name="keywords" content="Padavan, CAKE, SQM, Bufferbloat, 路由器, 韌體, 開源, 開放原始碼, 固件, TW641, 雲端編譯, sch_cake, mobile01, mobile01.com, ptt, ptt.cc, right, right.com.cn, 恩山, 恩山无线论坛, 恩山無線論壇, 恩山論壇, 論壇, 论坛, 刷機, 路由器刷機, 第三方韌體, 第三方固件, 老毛子, 老毛子固件, OpenWrt, Tomato, 網路優化, 降低延遲, K2P, DIR-878, MI-R3G, GL.iNet, 移植, port, backport">
   
   <link rel="icon" href="https://github.com/TW641.png" type="image/png">
   
@@ -27,22 +27,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#42b983">
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" as="script">
+  <link rel="preload" href="lib/docsify.min.js" as="script">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
+  <link rel="stylesheet" href="lib/vue.css">
+  <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
   <style>
-    /* 稍微優化一下表格在網頁上的顯示，讓你的 142 款機型表格更好看 */
+    /* 稍微優化一下表格在網頁上的顯示 */
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
     
-    /* 改善 CLS (版面配置位移)：給圖片一個預設的區塊顯示行為，降低載入時的跳動 */
+    /* 改善 CLS (版面配置位移)：給圖片預設顯示行為 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
+    
+    /* 無障礙滿分關鍵：強制提升超連結文字的對比度 */
+    .markdown-section a { color: #0550ae; font-weight: 600; text-decoration: underline; }
+    #docsify-darklight-theme.dark .markdown-section a { color: #79c0ff; }
   </style>
 </head>
 <body>
@@ -53,19 +56,13 @@
         name: 'Padavan-CAKE 專案',
         repo: 'TW641/Padavan-CAKE',
         
-        // 終極路由防護網：無差別攔截所有可能的路徑，防止 404
         alias: {
-            // 捕捉帶有 .md 的標準寫法
             '.*?/README_TW.md': '/README_TW.md',
             '.*?/README_CN.md': '/README_CN.md',
             '.*?/README.md': '/README.md',
-            
-            // 兼容沒有附檔名的舊寫法（防呆）
             '.*?/README_TW': '/README_TW.md',
             '.*?/README_CN': '/README_CN.md',
             '.*?/README': '/README.md',
-            
-            // 預設首頁
             '/': '/README_TW.md'
         },
 
@@ -77,8 +74,8 @@
     }
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js" defer></script>
+  <script src="lib/docsify.min.js"></script>
+  <script src="lib/index.min.js" defer></script>
+  <script src="lib/zoom-image.min.js" defer></script>
 </body>
 </html>

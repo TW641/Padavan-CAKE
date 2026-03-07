@@ -98,13 +98,16 @@
 
         plugins: [
             function(hook, vm) {
+                // 使用 doneEach：在網頁完全生成（包含 Docsify 的側邊目錄）後立刻掃描
                 hook.doneEach(function() {
-                    // 任務 1：無障礙 100 分 (修復非法清單)
+                    // 任務 1：修復包含「自動目錄」在內的所有非法清單（完全同步，無時間差）
                     var lists = document.querySelectorAll('ul, ol');
                     lists.forEach(function(list) {
                         var nodes = Array.from(list.childNodes);
                         nodes.forEach(function(node) {
+                            // 抓出純文字節點 (nodeType 3)
                             var isTextNode = (node.nodeType === 3 && node.nodeValue.trim() !== '');
+                            // 抓出非 <li> 的 HTML 標籤 (nodeType 1)
                             var isInvalidElement = (node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase()));
                             
                             if (isTextNode || isInvalidElement) {
@@ -115,19 +118,12 @@
                         });
                     });
 
-                    // 任務 2：圖片效能 100 分特化版 (首圖 VIP 插隊，其餘懶載入)
+                    // 任務 2：圖片效能優化 (不改原檔，透過 HTML 屬性榨出效能)
                     var images = document.querySelectorAll('img');
-                    images.forEach(function(img, index) {
-                        if (index === 0) {
-                            // 第一張圖 (LCP)：絕對不能懶載入，優先權調到最高！
-                            img.setAttribute('loading', 'eager');
-                            img.setAttribute('fetchpriority', 'high');
-                        } else {
-                            // 螢幕外的其他圖片：繼續乖乖排隊懶載入
-                            if (!img.hasAttribute('loading')) {
-                                img.setAttribute('loading', 'lazy');
-                            }
-                            img.setAttribute('decoding', 'async');
+                    images.forEach(function(img) {
+                        if (!img.hasAttribute('loading')) {
+                            img.setAttribute('loading', 'lazy'); // 不在畫面內的先不要載
+                            img.setAttribute('decoding', 'async'); // 在背景默默解碼，不卡頓
                         }
                     });
                 });

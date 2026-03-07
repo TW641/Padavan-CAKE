@@ -168,10 +168,12 @@ CAKE 最主要的目标是消除 Bufferbloat（缓冲膨胀）。
 ⚠️ **注意：** CAKE 比较消耗 CPU 性能。在硬件较弱的路由器上处理超过 350 Mbps 以上的带宽时，可能会成为性能瓶颈。
 
 ### 🔍 怎么确认 CAKE 完美运行
-<a href="images/VerifyCAKE1.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE1.png" width="3816" height="1907" alt="确认运行图1"></a>
-<a href="images/VerifyCAKE2.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE2.png" width="3816" height="1907" alt="确认运行图2"></a>
-<a href="images/VerifyCAKE3.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE3.png" width="3816" height="1907" alt="确认运行图3"></a>
-<a href="images/VerifyCAKE4.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 5px; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE4.png" width="3816" height="1907" alt="确认运行图4"></a>
+<div class="image-grid-2">
+    <a href="images/VerifyCAKE1.png" target="_blank"><img src="images/VerifyCAKE1.png" width="3816" height="1907" alt="确认运行图1"></a>
+    <a href="images/VerifyCAKE2.png" target="_blank"><img src="images/VerifyCAKE2.png" width="3816" height="1907" alt="确认运行图2"></a>
+    <a href="images/VerifyCAKE3.png" target="_blank"><img src="images/VerifyCAKE3.png" width="3816" height="1907" alt="确认运行图3"></a>
+    <a href="images/VerifyCAKE4.png" target="_blank"><img src="images/VerifyCAKE4.png" width="3816" height="1907" alt="确认运行图4"></a>
+</div>
 
 ---
 

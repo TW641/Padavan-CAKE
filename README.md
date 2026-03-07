@@ -53,9 +53,11 @@ Dr. Dikshie from **Keio University**, a top university in Japan, also paid atten
 * **🇹🇼 Presidential-level Digital Diplomacy:**
 LibreQoS officially published a **tribute post** on international social platforms like X (Twitter), Facebook, and LinkedIn, praising **this project** as a **"Time-Traveling Valentine's Gift"** for Dave Täht, and unprecedentedly tagged the **President of Taiwan, Lai Ching-te, former President Tsai Ing-wen, and the Presidential Office Spokesperson**! Bringing Taiwan's open-source technical contributions to the international stage is true citizen diplomacy in action! 🇹🇼
 
-<a href="images/Facebook.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/Facebook.png" width="1107" height="1744" alt="LibreQoS Facebook Post"></a>
-<a href="images/X.png" target="_blank"><img style="max-width: 100%; height: auto; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 8px;" src="images/X.png" width="902" height="1350"src="images/X.png" width="902" height="1350" alt="LibreQoS X Post"></a>
-<a href="images/LinkedIn.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/LinkedIn.png" width="947" height="1376" alt="LibreQoS LinkedIn Post"></a>
+<div class="image-grid-3">
+    <a href="images/Facebook.png" target="_blank"><img src="images/Facebook.png" width="1107" height="1744" alt="LibreQoS Facebook Post"></a>
+    <a href="images/X.png" target="_blank"><img src="images/X.png" width="902" height="1350" alt="LibreQoS X Post"></a>
+    <a href="images/LinkedIn.png" target="_blank"><img src="images/LinkedIn.png" width="947" height="1376" alt="LibreQoS LinkedIn Post"></a>
+</div>
 
 *[Image: LibreQoS official tribute posts across Facebook, X, and LinkedIn]*
 
@@ -125,10 +127,12 @@ CAKE's primary goal is to eliminate Bufferbloat.
 ⚠️ **Note:** CAKE is relatively CPU-intensive. It may become a performance bottleneck on weaker routers when handling bandwidths over 350 Mbps.
 
 ### 🔍 How to Verify CAKE is Running Perfectly
-<a href="images/VerifyCAKE1.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE1.png" width="3816" height="1907"></a>
-<a href="images/VerifyCAKE2.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE2.png" width="3816" height="1907"></a>
-<a href="images/VerifyCAKE3.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE3.png" width="3816" height="1907"></a>
-<a href="images/VerifyCAKE4.png" target="_blank"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="images/VerifyCAKE4.png" width="3816" height="1907"></a>
+<div class="image-grid-2">
+    <a href="images/VerifyCAKE1.png" target="_blank"><img src="images/VerifyCAKE1.png" width="3816" height="1907" alt="Verify 1"></a>
+    <a href="images/VerifyCAKE2.png" target="_blank"><img src="images/VerifyCAKE2.png" width="3816" height="1907" alt="Verify 2"></a>
+    <a href="images/VerifyCAKE3.png" target="_blank"><img src="images/VerifyCAKE3.png" width="3816" height="1907" alt="Verify 3"></a>
+    <a href="images/VerifyCAKE4.png" target="_blank"><img src="images/VerifyCAKE4.png" width="3816" height="1907" alt="Verify 4"></a>
+</div>
 
 ---
 

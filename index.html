@@ -3,52 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <title>TW641 | Padavan-CAKE 雲端編譯懶人包</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
+  <meta name="description" content="TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。">
+  <meta name="keywords" content="Padavan, CAKE, SQM, Bufferbloat, 路由器, 韌體, 開源, 雲端編譯, TW641, sch_cake, mobile01, ptt, 恩山, 刷機, 老毛子, K2P, DIR-878, MI-R3G">
+  
+  <link rel="icon" href="https://github.com/TW641.png" type="image/png">
+  
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://tw641.github.io/Padavan-CAKE/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://tw641.github.io/sitemap.xml">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tw641.github.io/Padavan-CAKE/">
+  <meta property="og:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包">
+  <meta property="og:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲，讓老舊路由器發揮極致效能。">
+  <meta property="og:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包">
+  <meta name="twitter:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲。">
+  <meta name="twitter:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#42b983">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js" as="script">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
   <style>
     /* 稍微優化一下表格在網頁上的顯示，讓你的 142 款機型表格更好看 */
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
+    
+    /* 改善 CLS (版面配置位移)：給圖片一個預設的區塊顯示行為，降低載入時的跳動 */
+    .markdown-section img { display: block; max-width: 100%; height: auto; }
   </style>
 </head>
 <body>
   <div id="app">網頁載入中，請稍候... (Loading...)</div>
 
   <script>
-        window.$docsify = {
-            name: 'Padavan-CAKE 專案',
-            repo: 'TW641/Padavan-CAKE',
+    window.$docsify = {
+        name: 'Padavan-CAKE 專案',
+        repo: 'TW641/Padavan-CAKE',
+        
+        // 終極路由防護網：無差別攔截所有可能的路徑，防止 404
+        alias: {
+            // 捕捉帶有 .md 的標準寫法
+            '.*?/README_TW.md': '/README_TW.md',
+            '.*?/README_CN.md': '/README_CN.md',
+            '.*?/README.md': '/README.md',
             
-            // 終極路由防護網：無差別攔截所有可能的路徑，防止 404
-            alias: {
-                // 捕捉帶有 .md 的標準寫法
-                '.*?/README_TW.md': '/README_TW.md',
-                '.*?/README_CN.md': '/README_CN.md',
-                '.*?/README.md': '/README.md',
-                
-                // 兼容沒有附檔名的舊寫法（防呆）
-                '.*?/README_TW': '/README_TW.md',
-                '.*?/README_CN': '/README_CN.md',
-                '.*?/README': '/README.md',
-                
-                // 預設首頁
-                '/': '/README_TW.md'
-            },
+            // 兼容沒有附檔名的舊寫法（防呆）
+            '.*?/README_TW': '/README_TW.md',
+            '.*?/README_CN': '/README_CN.md',
+            '.*?/README': '/README.md',
+            
+            // 預設首頁
+            '/': '/README_TW.md'
+        },
 
-            auto2top: true,
-            maxLevel: 3,
-            subMaxLevel: 2,
-            loadNavbar: false,
-            loadSidebar: false
-        }
-    </script>
+        auto2top: true,
+        maxLevel: 3,
+        subMaxLevel: 2,
+        loadNavbar: false,
+        loadSidebar: false
+    }
+  </script>
 
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js" defer></script>
 </body>
 </html>

@@ -136,8 +136,6 @@ CAKE 最主要的目標是消除 Bufferbloat（緩衝膨脹）。
 
 ### 🔍 怎麼確認 CAKE 完美運行
 
-### 🔍 怎麼確認 CAKE 完美運行
-
 <div class="image-grid-2">
     <a href="images/VerifyCAKE1.png" target="_blank"><img src="images/VerifyCAKE1.png" width="3816" height="1907" alt="圖1"></a>
     <a href="images/VerifyCAKE2.png" target="_blank"><img src="images/VerifyCAKE2.png" width="3816" height="1907" alt="圖2"></a>

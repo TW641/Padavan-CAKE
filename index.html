@@ -27,8 +27,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#42b983">
 
-  <link rel="preload" href="README_TW.md" as="fetch" crossorigin="anonymous">
-
   <link rel="preload" href="lib/docsify.min.js" as="script">
   <link rel="preload" href="lib/vue.css" as="style">
   <link rel="preload" href="lib/style.min.css" as="style">
@@ -101,7 +99,7 @@
         plugins: [
             function(hook, vm) {
                 hook.doneEach(function() {
-                    // 任務 1：無障礙完美 100 分修復
+                    // 任務 1：無障礙 100 分 (修復非法清單)
                     var lists = document.querySelectorAll('ul, ol');
                     lists.forEach(function(list) {
                         var nodes = Array.from(list.childNodes);
@@ -117,13 +115,20 @@
                         });
                     });
 
-                    // 任務 2：圖片效能 97 分最佳解 (全員懶載入，把頻寬讓給文字)
+                    // 任務 2：圖片效能 100 分特化版 (首圖 VIP 插隊，其餘懶載入)
                     var images = document.querySelectorAll('img');
-                    images.forEach(function(img) {
-                        if (!img.hasAttribute('loading')) {
-                            img.setAttribute('loading', 'lazy');
+                    images.forEach(function(img, index) {
+                        if (index === 0) {
+                            // 第一張圖 (LCP)：絕對不能懶載入，優先權調到最高！
+                            img.setAttribute('loading', 'eager');
+                            img.setAttribute('fetchpriority', 'high');
+                        } else {
+                            // 螢幕外的其他圖片：繼續乖乖排隊懶載入
+                            if (!img.hasAttribute('loading')) {
+                                img.setAttribute('loading', 'lazy');
+                            }
+                            img.setAttribute('decoding', 'async');
                         }
-                        img.setAttribute('decoding', 'async');
                     });
                 });
             }

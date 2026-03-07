@@ -39,15 +39,16 @@
     body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
 
-    /* 徹底消滅 CLS：隱藏頂部會造成畫面跳動的進度條動畫 */
+    /* 徹底消滅 CLS：隱藏頂部進度條，並預留載入畫面的高度，防止畫面瞬間撐開 */
     .progress { display: none !important; }
+    #app { min-height: 100vh; padding-top: 20px; }
 
     /* 優化表格在網頁上的顯示 */
     .markdown-section table { display: table; width: 100%; }
     .markdown-section td, .markdown-section th { word-break: break-word; }
     
-    /* 確保圖片不跳動 */
-    .markdown-section img { display: block; max-width: 100%; height: auto; }
+    /* 確保圖片不跳動：利用現代瀏覽器的長寬比例計算特性 */
+    .markdown-section img { display: block; max-width: 100%; height: auto; content-visibility: auto; }
     
     /* 魔法 CSS 1：雙排並列 */
     .image-grid-2 {
@@ -102,10 +103,8 @@
         name: 'Padavan-CAKE 專案',
         repo: 'TW641/Padavan-CAKE',
         
-        darklightTheme: {
-            defaultTheme: 'dark', // 自動深色模式起點
-        },
-
+        // 已經移除 darklightTheme 強制設定，回歸自然判定與使用者自由切換
+        
         alias: {
             '.*?/README_TW.md': '/README_TW.md',
             '.*?/README_CN.md': '/README_CN.md',
@@ -122,24 +121,29 @@
         loadNavbar: false,
         loadSidebar: false,
 
-        // 利用 Docsify 外掛機制，在畫面渲染後，強制掃描並修復所有非法的清單結構！
+        // 優化版無障礙修復：利用 requestAnimationFrame 與批次處理，消滅「強制重排 (Reflow)」警告
         plugins: [
             function(hook, vm) {
                 hook.doneEach(function() {
-                    // 找出畫面上所有的 ul 和 ol
-                    var lists = document.querySelectorAll('ul, ol');
-                    lists.forEach(function(list) {
-                        // 檢查清單裡面的每一個第一層子元素
-                        Array.from(list.children).forEach(function(child) {
-                            var tag = child.tagName.toLowerCase();
-                            // 如果發現有不合法的標籤 (例如 Docsify 塞進去的 a 或 p 或 h2)
-                            if (tag !== 'li' && tag !== 'script' && tag !== 'template') {
-                                // 創建一個合法的 <li> 標籤
-                                var wrapper = document.createElement('li');
-                                // 把這個非法元素用 <li> 包起來，徹底符合 HTML 規範與無障礙標準
-                                list.insertBefore(wrapper, child);
-                                wrapper.appendChild(child);
-                            }
+                    // 讓瀏覽器在下一次畫面重繪前執行，確保效能最佳化
+                    requestAnimationFrame(function() {
+                        var lists = document.querySelectorAll('ul, ol');
+                        var elementsToWrap = []; // 先收集，不要邊找邊改
+                        
+                        lists.forEach(function(list) {
+                            Array.from(list.children).forEach(function(child) {
+                                var tag = child.tagName.toLowerCase();
+                                if (tag !== 'li' && tag !== 'script' && tag !== 'template') {
+                                    elementsToWrap.push({ parent: list, node: child });
+                                }
+                            });
+                        });
+
+                        // 收集完畢後，一次性批次修改 DOM，避免 Layout Thrashing
+                        elementsToWrap.forEach(function(item) {
+                            var wrapper = document.createElement('li');
+                            item.parent.insertBefore(wrapper, item.node);
+                            wrapper.appendChild(item.node);
                         });
                     });
                 });

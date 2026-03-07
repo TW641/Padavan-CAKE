@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
   <style>
-    /* 效能極致化：強制使用本機系統字型，不僅清晰且不消耗任何網路資源 */
+    /* 效能極致化：強制使用本機系統字型 */
     body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
     code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
 
@@ -49,7 +49,7 @@
     /* 確保圖片不跳動 */
     .markdown-section img { display: block; max-width: 100%; height: auto; }
     
-    /* 魔法 CSS 1：雙排並列 (適合 4 張測試圖) */
+    /* 魔法 CSS 1：雙排並列 */
     .image-grid-2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -58,7 +58,7 @@
         margin-bottom: 15px;
     }
 
-    /* 魔法 CSS 2：三排並列 (適合 3 張社群貼文截圖) */
+    /* 魔法 CSS 2：三排並列 */
     .image-grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -67,22 +67,22 @@
         margin-bottom: 15px;
     }
 
-    /* 讓網格內的圖片統一風格，消除底部多餘空白 */
+    /* 讓網格內的圖片統一風格 */
     .image-grid-2 img, .image-grid-3 img { 
         margin-bottom: 0 !important; 
         border: 1px solid #ccc; 
         border-radius: 8px; 
         width: 100%; 
         height: auto; 
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 加一點點陰影更有質感 */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    /* 手機版自適應：螢幕小於 768px 時，全部自動變成單排垂直顯示 */
+    /* 手機版自適應 */
     @media (max-width: 768px) {
         .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; }
     }
     
-    /* 無障礙對比度修復 (雙模式相容) */
+    /* 無障礙對比度修復 */
     .markdown-section a { 
         color: inherit; 
         font-weight: 600; 
@@ -102,6 +102,10 @@
         name: 'Padavan-CAKE 專案',
         repo: 'TW641/Padavan-CAKE',
         
+        darklightTheme: {
+            defaultTheme: 'dark', // 自動深色模式起點
+        },
+
         alias: {
             '.*?/README_TW.md': '/README_TW.md',
             '.*?/README_CN.md': '/README_CN.md',
@@ -113,10 +117,34 @@
         },
 
         auto2top: true,
-        maxLevel: 2, /* 無障礙滿分關鍵：限制目錄層級，避免 Docsify 產生不合規的嵌套 ul 結構 */
+        maxLevel: 2, 
         subMaxLevel: 0,
         loadNavbar: false,
-        loadSidebar: false
+        loadSidebar: false,
+
+        // 利用 Docsify 外掛機制，在畫面渲染後，強制掃描並修復所有非法的清單結構！
+        plugins: [
+            function(hook, vm) {
+                hook.doneEach(function() {
+                    // 找出畫面上所有的 ul 和 ol
+                    var lists = document.querySelectorAll('ul, ol');
+                    lists.forEach(function(list) {
+                        // 檢查清單裡面的每一個第一層子元素
+                        Array.from(list.children).forEach(function(child) {
+                            var tag = child.tagName.toLowerCase();
+                            // 如果發現有不合法的標籤 (例如 Docsify 塞進去的 a 或 p 或 h2)
+                            if (tag !== 'li' && tag !== 'script' && tag !== 'template') {
+                                // 創建一個合法的 <li> 標籤
+                                var wrapper = document.createElement('li');
+                                // 把這個非法元素用 <li> 包起來，徹底符合 HTML 規範與無障礙標準
+                                list.insertBefore(wrapper, child);
+                                wrapper.appendChild(child);
+                            }
+                        });
+                    });
+                });
+            }
+        ]
     }
   </script>
 

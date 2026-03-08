@@ -1,4 +1,4 @@
-# Padavan-CAKE
+# [Padavan-CAKE](https://TW641.github.io/Padavan-CAKE/)
 
 > 繁體中文 | [简体中文](README_CN.md) | [English](README.md)
 

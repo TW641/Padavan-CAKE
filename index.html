@@ -112,9 +112,15 @@
                                 }
                             });
                         });
+                        
                         document.querySelectorAll('img').forEach(img => {
                             img.setAttribute('loading', 'lazy');
                             img.setAttribute('decoding', 'async');
+                        });
+
+                        document.querySelectorAll('a.anchor').forEach(anchor => {
+                            const titleText = anchor.parentElement ? anchor.parentElement.textContent.trim() : '段落';
+                            anchor.setAttribute('aria-label', titleText + ' 錨點連結');
                         });
                     });
                 }

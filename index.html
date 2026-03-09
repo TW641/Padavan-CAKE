@@ -39,15 +39,24 @@
     <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        /* 1. 穩定捲動條，避免右側閃爍 */
+        /* 1. 穩定捲動條，避免右側閃爍 (已拔除會導致捲動失效的 overflow-y) */
         html { scrollbar-gutter: stable; }
         
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
-        /* 3. 已移除原版的 body { opacity: 0; }，改為使用 LCP 實體保底內容，避免手機版超時驚嘆號 */
+        /* 3. ★ 終極雙棲分流寫法 ★ */
+        
+        /* 【全域 / 手機版優先】準備 LCP 保底文字，不使用隱形 */
         .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+        /* 【電腦版專屬 (>=768px)】啟動 0.8 秒隱形掩護排版，確保 CLS 滿分 */
+        @media screen and (min-width: 768px) {
+            body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+        }
+        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @keyframes forceShow { to { opacity: 1; } }
 
         /* 4. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
         @media screen and (min-width: 768px) {

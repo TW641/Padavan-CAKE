@@ -44,13 +44,8 @@
         
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
-        
-        /* 3. LCP 與 CLS 的完美平衡：縮短強制隱藏時間到 0.3 秒，避免手機版 LCP 超時扣分 */
-        body { opacity: 0; animation: forceShow 0.1s 0.3s forwards; }
-        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
-        @keyframes forceShow { to { opacity: 1; } }
 
-        /* 4. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
+        /* 3. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
         @media screen and (min-width: 768px) {
             body:not(.close) main .content { left: 300px !important; transition: none !important; }
         }
@@ -99,7 +94,11 @@
     </script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div style="padding: 2rem; text-align: center; font-family: sans-serif; opacity: 0.7;">
+            網頁載入中...
+        </div>
+    </div>
 
     <script>
         window.$docsify = {
@@ -122,8 +121,6 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        // 使用 requestAnimationFrame + setTimeout 將所有 DOM 操作推遲
-                        // 確保畫面優先繪製，徹底釋放手機版主執行緒 (消滅 TBT 驚嘆號)
                         requestAnimationFrame(() => {
                             setTimeout(() => {
                                 // 1. 修復空白列表節點

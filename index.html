@@ -129,9 +129,12 @@
                             }
                         });
                         
-                        document.querySelectorAll('img').forEach(img => {
-                            img.setAttribute('loading', 'lazy');
-                            img.setAttribute('decoding', 'async');
+                        document.querySelectorAll('img').forEach((img, i) => {
+                            if (i === 0) img.setAttribute('fetchpriority', 'high');
+                            else {
+                                img.setAttribute('loading', 'lazy');
+                                img.setAttribute('decoding', 'async');
+                            }
                         });
 
                         setTimeout(() => {

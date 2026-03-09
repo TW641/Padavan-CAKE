@@ -35,12 +35,8 @@
     <link rel="preload" href="lib/vue.css" as="style">
     <link rel="preload" href="lib/style.min.css" as="style">
 
-    <link rel="stylesheet" href="lib/vue.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="lib/vue.css">
-        <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css">
-    </noscript>
+    <link rel="stylesheet" href="lib/vue.css">
+    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css">
 
     <style>
         /* 1. 穩定捲動條，避免右側閃爍 */
@@ -49,7 +45,7 @@
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
-        /* 3. ★ 終極雙棲分流寫法 ★ */
+        /* 3. 終極雙棲分流寫法 */
         .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
 

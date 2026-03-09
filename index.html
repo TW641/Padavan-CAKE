@@ -40,7 +40,14 @@
     <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        body { margin: 0; padding: 0; }
+        html, body { 
+            margin: 0 !important; 
+            padding: 0 !important; 
+            min-height: 100vh !important; 
+            overflow-x: hidden !important; 
+            overflow-y: scroll !important; 
+            scrollbar-gutter: stable; 
+        }
         body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
         code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
         html { scrollbar-gutter: stable; }

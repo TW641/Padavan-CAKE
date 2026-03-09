@@ -70,8 +70,8 @@
         @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
         
         /* 無障礙高對比修正：解決報告中 <em> 與 blockquote 顏色太淡被扣分的問題 */
-        /* ★ 唯一修改點：將連結顏色微調至較深的 #2c8a5a，確保對比度測試滿分 */
-        .markdown-section a { color: #2c8a5a; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+        /* ★ 唯一更動行：將 color 換成較深的 #25764d 以通過無障礙對比測試 */
+        .markdown-section a { color: #25764d; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
         .markdown-section a:hover { text-decoration-color: transparent; }
         .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: #42b983; background-color: rgba(66, 185, 131, 0.05); padding: 10px 15px; }
         .markdown-section em { color: inherit; font-style: italic; opacity: 1 !important; }

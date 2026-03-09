@@ -32,51 +32,35 @@
 
     <link rel="preload" href="README_TW.md" as="fetch" crossorigin="anonymous" fetchpriority="high">
     <link rel="preload" href="lib/docsify.min.js" as="script">
-    
-    <link rel="stylesheet" href="lib/vue.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="lib/vue.css">
-        <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css">
-    </noscript>
+    <link rel="preload" href="lib/vue.css" as="style">
+    <link rel="preload" href="lib/style.min.css" as="style">
+
+    <link rel="stylesheet" href="lib/vue.css">
+    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css">
 
     <style>
-        /* ========================================================= */
-        /* 核心絕招：滿版載入底板 (App Shell) 與透明度控制                */
-        /* ========================================================= */
-        
-        /* 1. 滿版底板，阻擋一切未排版的醜畫面 */
-        #loading-baseplate {
-            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: #ffffff; /* 白底，避免閃爍 */
-            z-index: 999999;
-            display: flex; justify-content: center; align-items: center;
-            transition: opacity 0.5s ease-out; /* 淡出動畫 */
-        }
-        @media (prefers-color-scheme: dark) {
-            #loading-baseplate { background-color: #1a1a1a; } /* 支援深色模式的底板 */
-        }
-        
-        .baseplate-text {
-            color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
-
-        /* 2. 讓主內容在背後偷偷排版 (opacity: 0 免疫 CLS) */
-        #app { opacity: 0; transition: opacity 0.5s ease-in; min-height: 100vh; }
-        #app.ready { opacity: 1; }
-
-        /* ========================================================= */
-        /* 其他基礎排版設定                                            */
-        /* ========================================================= */
+        /* 1. 穩定捲動條，避免右側閃爍 */
         html { scrollbar-gutter: stable; }
+        
+        /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
+        /* 3. 終極雙棲分流寫法 */
+        .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
+
+        @media screen and (min-width: 768px) {
+            body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+        }
+        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @keyframes forceShow { to { opacity: 1; } }
+
+        /* 4. 預先幫 Docsify 的側邊欄卡好位子，消滅 CLS */
         @media screen and (min-width: 768px) {
             body:not(.close) main .content { left: 300px !important; transition: none !important; }
         }
 
+        #app { min-height: 100vh; }
         body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
         code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
         .progress { display: none !important; }
@@ -120,11 +104,9 @@
     </script>
 </head>
 <body>
-    <div id="loading-baseplate">
-        <div class="baseplate-text">載入中，請稍候...</div>
+    <div id="app">
+        <div class="app-loading">載入中，請稍候...</div>
     </div>
-
-    <div id="app"></div>
 
     <script>
         window.$docsify = {
@@ -147,51 +129,38 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        // 任務 1：最優先執行！揭開布幕讓畫面出來 (使用 requestAnimationFrame 確保畫面最高優先順序)
-                        requestAnimationFrame(() => {
-                            const app = document.getElementById('app');
-                            const baseplate = document.getElementById('loading-baseplate');
-                            if (app) app.classList.add('ready');
-                            if (baseplate) {
-                                baseplate.style.opacity = '0';
-                                setTimeout(() => baseplate.style.display = 'none', 500);
-                            }
+                        // 1. 修復空白列表節點 (同步執行，避免畫面閃爍 CLS)
+                        document.querySelectorAll('ul, ol').forEach(list => {
+                            Array.from(list.childNodes).forEach(node => {
+                                const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
+                                const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
+                                if (isText || isInvalid) {
+                                    const wrapper = document.createElement('li');
+                                    list.insertBefore(wrapper, node);
+                                    wrapper.appendChild(node);
+                                }
+                            });
+                        });
+                        
+                        // 2. 圖片效能最佳化 (同步執行)
+                        document.querySelectorAll('img').forEach(img => {
+                            img.setAttribute('loading', 'lazy');
+                            img.setAttribute('decoding', 'async');
                         });
 
-                        // 任務 2：讓主執行緒喘息 50 毫秒後，再偷偷在背景修復空白列表 (最耗 CPU 的工作)
+                        // 3. 無障礙標籤 (延遲執行)
                         setTimeout(() => {
-                            document.querySelectorAll('ul, ol').forEach(list => {
-                                Array.from(list.childNodes).forEach(node => {
-                                    const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
-                                    const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
-                                    if (isText || isInvalid) {
-                                        const wrapper = document.createElement('li');
-                                        list.insertBefore(wrapper, node);
-                                        wrapper.appendChild(node);
-                                    }
-                                });
+                            document.querySelectorAll('a.anchor').forEach(anchor => {
+                                const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
+                                anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
                             });
-                        }, 50);
-                        
-                        // 任務 3：再等 150 毫秒後，處理圖片優化
-                        setTimeout(() => {
-                            document.querySelectorAll('.markdown-section img').forEach(img => {
-                                img.setAttribute('loading', 'lazy');
-                                img.setAttribute('decoding', 'async');
-                            });
-                        }, 150);
 
-                        // 任務 4：再等 250 毫秒後，處理無障礙標籤 (最低優先順序)
-                        setTimeout(() => {
-                            document.querySelectorAll('.markdown-section a').forEach(link => {
-                                if (link.classList.contains('anchor')) {
-                                    const titleText = link.parentElement ? link.parentElement.textContent.replace(/#/g, '').trim() : '段落';
-                                    link.setAttribute('aria-label', titleText + ' 的錨點連結');
-                                } else if (link.getAttribute('target') === '_blank' && !link.getAttribute('aria-label')) {
+                            document.querySelectorAll('a[target="_blank"]').forEach(link => {
+                                if (!link.getAttribute('aria-label')) {
                                     link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
                                 }
                             });
-                        }, 250);
+                        }, 150);
                     });
                 }
             ]

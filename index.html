@@ -1,1 +1,157 @@
-<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>TW641 | Padavan-CAKE 雲端編譯懶人包</title><link rel="canonical" href="https://tw641.github.io/Padavan-CAKE/"><meta name="description" content="TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。"><meta name="keywords" content="Padavan, CAKE, SQM, Bufferbloat, 路由器, 韌體, 開源, 開放原始碼, 固件, TW641, 雲端編譯, sch_cake, mobile01, mobile01.com, ptt, ptt.cc, right, right.com.cn, 恩山, 恩山无线论坛, 恩山無線論壇, 恩山論壇, 論壇, 论坛, 刷機, 路由器刷機, 第三方韌體, 第三方固件, 老毛子, 老毛子固件, OpenWrt, Tomato, 網路優化, 降低延遲, K2P, DIR-878, MI-R3G, GL.iNet, 移植, port, backport"><meta name="author" content="TW641"><link rel="icon" href="https://github.com/TW641.png" type="image/png"><link rel="preconnect" href="https://github.com" crossorigin><meta name="robots" content="index, follow, max-image-preview:large"><link rel="sitemap" type="application/xml" title="Sitemap" href="https://tw641.github.io/sitemap.xml"><meta property="og:type" content="website"><meta property="og:url" content="https://tw641.github.io/Padavan-CAKE/"><meta property="og:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包"><meta property="og:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲，讓老舊路由器發揮極致效能。"><meta property="og:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包"><meta name="twitter:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲。"><meta name="twitter:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#42b983"><link rel="preload" href="README_TW.md" as="fetch" crossorigin="anonymous" fetchpriority="high"><link rel="preload" href="lib/docsify.min.js" as="script"><link rel="preload" href="lib/vue.css" as="style"><link rel="preload" href="lib/style.min.css" as="style"><link rel="stylesheet" href="lib/vue.css"><link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/><style>html{scrollbar-gutter:stable}body{margin:0;padding:0}.app-loading{text-align:center;padding-top:15vh;color:var(--theme-color,#42b983);font-weight:bold;font-size:1.2rem;animation:pulse 1.5s infinite}@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}@media screen and (min-width:768px){body{opacity:0;animation:forceShow .1s .8s forwards}body:not(.close) main .content{left:300px!important;transition:none!important}}body.ready{opacity:1;animation:none;transition:opacity .15s ease-in}@keyframes forceShow{to{opacity:1}}#app{min-height:100vh}body,.markdown-section{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Microsoft JhengHei",sans-serif!important}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace!important}.progress{display:none!important}.markdown-section table{display:table;width:100%}.markdown-section td,.markdown-section th{word-break:break-word}.markdown-section img{display:block;max-width:100%;height:auto}.image-grid-2,.image-grid-3{display:grid;gap:15px;margin:15px 0}.image-grid-2{grid-template-columns:repeat(2,1fr)}.image-grid-3{grid-template-columns:repeat(3,1fr)}.image-grid-2 img,.image-grid-3 img{margin-bottom:0!important;border:1px solid #ccc;border-radius:8px;width:100%;height:auto;box-shadow:0 2px 8px rgba(0,0,0,.1)}@media (max-width:768px){.image-grid-2,.image-grid-3{grid-template-columns:1fr}}.markdown-section a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:2px;text-decoration-color:var(--theme-color,#42b983)}.markdown-section a:hover{text-decoration-color:transparent}.markdown-section blockquote{color:inherit;opacity:1!important;border-left-color:var(--theme-color,#42b983);background-color:transparent;padding:10px 15px}.markdown-section em{color:inherit;font-style:italic;opacity:1!important}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Padavan-CAKE 雲端編譯懶人包","operatingSystem":"Padavan / Linux","applicationCategory":"UtilitiesApplication","description":"TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。","url":"https://tw641.github.io/Padavan-CAKE/","author":{"@type":"Person","name":"TW641","url":"https://github.com/TW641"},"offers":{"@type":"Offer","price":"0","priceCurrency":"TWD"}}</script></head><body><div id="app"><div class="app-loading">載入中，請稍候...</div></div><script>window.$docsify={name:'Padavan-CAKE 專案',repo:'TW641/Padavan-CAKE',alias:{'.*?/README_TW.md':'/README_TW.md','.*?/README_CN.md':'/README_CN.md','.*?/README.md':'/README.md','.*?/README_TW':'/README_TW.md','.*?/README_CN':'/README_CN.md','.*?/README':'/README.md','/':'/README_TW.md'},auto2top:!0,maxLevel:2,subMaxLevel:0,loadNavbar:!1,loadSidebar:!1,plugins:[(e,t)=>{e.doneEach(()=>{document.querySelectorAll('ul, ol').forEach(e=>{Array.from(e.childNodes).forEach(t=>{let l=3===t.nodeType&&""!==t.nodeValue.trim(),o=1===t.nodeType&&!["li","script","template"].includes(t.tagName.toLowerCase());if(l||o){let n=document.createElement("li");e.insertBefore(n,t),n.appendChild(t)}})}),document.querySelectorAll("img").forEach(e=>{e.setAttribute("loading","lazy"),e.setAttribute("decoding","async")}),setTimeout(()=>{document.querySelectorAll("a.anchor").forEach(e=>{let t=e.parentElement?e.parentElement.textContent.replace(/#/g,"").trim():"段落";e.setAttribute("aria-label",t+" 的錨點連結")}),document.querySelectorAll('a[target="_blank"]').forEach(e=>{e.getAttribute("aria-label")||e.setAttribute("aria-label",(e.textContent.trim()||"外部連結")+" (在新分頁開啟)")})},150)})}]}</script><script src="lib/docsify.min.js"></script><script src="lib/index.min.js" defer></script><script src="lib/zoom-image.min.js" defer></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>TW641 | Padavan-CAKE 雲端編譯懶人包</title>
+
+    <link rel="canonical" href="https://tw641.github.io/Padavan-CAKE/">
+    
+    <meta name="description" content="TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。">
+    <meta name="keywords" content="Padavan, CAKE, SQM, Bufferbloat, 路由器, 韌體, 開源, 開放原始碼, 固件, TW641, 雲端編譯, sch_cake, mobile01, mobile01.com, ptt, ptt.cc, right, right.com.cn, 恩山, 恩山无线论坛, 恩山無線論壇, 恩山論壇, 論壇, 论坛, 刷機, 路由器刷機, 第三方韌體, 第三方固件, 老毛子, 老毛子固件, OpenWrt, Tomato, 網路優化, 降低延遲, K2P, DIR-878, MI-R3G, GL.iNet, 移植, port, backport">
+    <meta name="author" content="TW641">
+    
+    <link rel="icon" href="https://github.com/TW641.png" type="image/png">
+    <link rel="preconnect" href="https://github.com" crossorigin>
+    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://tw641.github.io/sitemap.xml">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tw641.github.io/Padavan-CAKE/">
+    <meta property="og:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包">
+    <meta property="og:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲，讓老舊路由器發揮極致效能。">
+    <meta property="og:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TW641 | Padavan-CAKE 雲端編譯懶人包">
+    <meta name="twitter:description" content="支援 142 款機型，一鍵雲端編譯！有效對抗 Bufferbloat 網路延遲。">
+    <meta name="twitter:image" content="https://tw641.github.io/Padavan-CAKE/images/CAKE.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#42b983">
+
+    <link rel="preload" href="README_TW.md" as="fetch" crossorigin="anonymous" fetchpriority="high">
+    <link rel="preload" href="lib/docsify.min.js" as="script">
+    <link rel="preload" href="lib/vue.css" as="style">
+    <link rel="preload" href="lib/style.min.css" as="style">
+
+    <link rel="stylesheet" href="lib/vue.css">
+    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
+
+    <style>
+        html { scrollbar-gutter: stable; }
+        body { margin: 0; padding: 0; }
+        
+        .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; }
+        
+        @media screen and (min-width: 768px) {
+            body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+            body:not(.close) main .content { left: 300px !important; transition: none !important; }
+        }
+        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @keyframes forceShow { to { opacity: 1; } }
+
+        #app { min-height: 100vh; }
+        body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
+        code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
+        .progress { display: none !important; }
+        
+        .markdown-section table { display: table; width: 100%; }
+        .markdown-section td, .markdown-section th { word-break: break-word; }
+        .markdown-section img { display: block; max-width: 100%; height: auto; }
+        .image-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 15px 0; }
+        .image-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 15px 0; }
+        .image-grid-2 img, .image-grid-3 img { margin-bottom: 0 !important; border: 1px solid #ccc; border-radius: 8px; width: 100%; height: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
+        
+        .markdown-section a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-color: var(--theme-color, #42b983); }
+        .markdown-section a:hover { text-decoration-color: transparent; }
+        .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: var(--theme-color, #42b983); background-color: transparent; padding: 10px 15px; }
+        .markdown-section em { color: inherit; font-style: italic; opacity: 1 !important; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Padavan-CAKE 雲端編譯懶人包",
+        "operatingSystem": "Padavan / Linux",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "TW641 移植 CAKE (sch_cake) Padavan 路由器韌體雲端編譯懶人包，支援 142 款機型，有效改善網路延遲 (Bufferbloat)。",
+        "url": "https://tw641.github.io/Padavan-CAKE/",
+        "author": {
+            "@type": "Person",
+            "name": "TW641",
+            "url": "https://github.com/TW641"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "TWD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="app-loading">載入中，請稍候...</div>
+    </div>
+
+    <script>
+        window.$docsify = {
+            name: 'Padavan-CAKE 專案',
+            repo: 'TW641/Padavan-CAKE',
+            alias: {
+                '.*?/README_TW.md': '/README_TW.md',
+                '.*?/README_CN.md': '/README_CN.md',
+                '.*?/README.md': '/README.md',
+                '.*?/README_TW': '/README_TW.md',
+                '.*?/README_CN': '/README_CN.md',
+                '.*?/README': '/README.md',
+                '/': '/README_TW.md'
+            },
+            auto2top: true,
+            maxLevel: 2,
+            subMaxLevel: 0,
+            loadNavbar: false,
+            loadSidebar: false,
+            plugins: [
+                (hook, vm) => {
+                    hook.doneEach(() => {
+                        document.querySelectorAll('ul, ol').forEach(list => {
+                            for (let node of list.childNodes) {
+                                if ((node.nodeType === 3 && node.nodeValue.trim() !== '') || 
+                                    (node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase()))) {
+                                    const wrapper = document.createElement('li');
+                                    list.insertBefore(wrapper, node);
+                                    wrapper.appendChild(node);
+                                }
+                            }
+                        });
+                        
+                        document.querySelectorAll('img').forEach(img => {
+                            img.setAttribute('loading', 'lazy');
+                            img.setAttribute('decoding', 'async');
+                        });
+
+                        setTimeout(() => {
+                            document.querySelectorAll('a.anchor').forEach(anchor => {
+                                const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
+                                anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
+                            });
+
+                            document.querySelectorAll('a[target="_blank"]:not([aria-label])').forEach(link => {
+                                link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
+                            });
+                        }, 150);
+                    });
+                }
+            ]
+        }
+    </script>
+
+    <script src="lib/docsify.min.js"></script>
+    <script src="lib/index.min.js" defer></script>
+    <script src="lib/zoom-image.min.js" defer></script>
+</body>
+</html>

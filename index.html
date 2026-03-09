@@ -147,52 +147,51 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        // 1. 修復空白列表節點
-                        document.querySelectorAll('ul, ol').forEach(list => {
-                            Array.from(list.childNodes).forEach(node => {
-                                const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
-                                const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
-                                if (isText || isInvalid) {
-                                    const wrapper = document.createElement('li');
-                                    list.insertBefore(wrapper, node);
-                                    wrapper.appendChild(node);
-                                }
-                            });
-                        });
-                        
-                        // 2. 圖片效能最佳化
-                        document.querySelectorAll('img').forEach(img => {
-                            img.setAttribute('loading', 'lazy');
-                            img.setAttribute('decoding', 'async');
-                        });
-
-                        // 3. 無障礙標籤
-                        document.querySelectorAll('a.anchor').forEach(anchor => {
-                            const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
-                            anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
-                        });
-                        document.querySelectorAll('a[target="_blank"]').forEach(link => {
-                            if (!link.getAttribute('aria-label')) {
-                                link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
-                            }
-                        });
-
-                        // ★ 核心魔法：確定所有排版都搞定後，揭開布幕！ ★
-                        setTimeout(() => {
+                        // 任務 1：最優先執行！揭開布幕讓畫面出來 (使用 requestAnimationFrame 確保畫面最高優先順序)
+                        requestAnimationFrame(() => {
                             const app = document.getElementById('app');
                             const baseplate = document.getElementById('loading-baseplate');
-                            
-                            // 內容淡入
                             if (app) app.classList.add('ready');
-                            
-                            // 底板淡出並隱藏
                             if (baseplate) {
                                 baseplate.style.opacity = '0';
-                                setTimeout(() => {
-                                    baseplate.style.display = 'none';
-                                }, 500); // 配合 CSS 的 0.5s 動畫時間
+                                setTimeout(() => baseplate.style.display = 'none', 500);
                             }
-                        }, 100); // 給瀏覽器 100ms 重繪緩衝
+                        });
+
+                        // 任務 2：讓主執行緒喘息 50 毫秒後，再偷偷在背景修復空白列表 (最耗 CPU 的工作)
+                        setTimeout(() => {
+                            document.querySelectorAll('ul, ol').forEach(list => {
+                                Array.from(list.childNodes).forEach(node => {
+                                    const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
+                                    const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
+                                    if (isText || isInvalid) {
+                                        const wrapper = document.createElement('li');
+                                        list.insertBefore(wrapper, node);
+                                        wrapper.appendChild(node);
+                                    }
+                                });
+                            });
+                        }, 50);
+                        
+                        // 任務 3：再等 150 毫秒後，處理圖片優化
+                        setTimeout(() => {
+                            document.querySelectorAll('.markdown-section img').forEach(img => {
+                                img.setAttribute('loading', 'lazy');
+                                img.setAttribute('decoding', 'async');
+                            });
+                        }, 150);
+
+                        // 任務 4：再等 250 毫秒後，處理無障礙標籤 (最低優先順序)
+                        setTimeout(() => {
+                            document.querySelectorAll('.markdown-section a').forEach(link => {
+                                if (link.classList.contains('anchor')) {
+                                    const titleText = link.parentElement ? link.parentElement.textContent.replace(/#/g, '').trim() : '段落';
+                                    link.setAttribute('aria-label', titleText + ' 的錨點連結');
+                                } else if (link.getAttribute('target') === '_blank' && !link.getAttribute('aria-label')) {
+                                    link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
+                                }
+                            });
+                        }, 250);
                     });
                 }
             ]

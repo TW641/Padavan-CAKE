@@ -45,14 +45,6 @@
         code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
         html { scrollbar-gutter: stable; }
         .progress { display: none !important; }
-        #app { 
-            position: fixed; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); 
-            font-size: 14px; 
-            opacity: 0.7; 
-        }
         .markdown-section table { display: table; width: 100%; }
         .markdown-section td, .markdown-section th { word-break: break-word; }
         .markdown-section img { display: block; max-width: 100%; height: auto; }
@@ -88,7 +80,7 @@
     </script>
 </head>
 <body>
-    <div id="app">網頁載入中，請稍候... (Loading...)</div>
+    <div id="app"></div>
 
     <script>
         window.$docsify = {

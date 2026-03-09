@@ -40,16 +40,17 @@
 
     <style>
         /* 1. 穩定捲動條，避免右側閃爍 */
-        html { scrollbar-gutter: stable; }
+        html { scrollbar-gutter: stable; overflow-y: scroll; }
         
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
-        /* ========================================================
-           已移除 body { opacity: 0 } 的設定，徹底消滅 LCP 驚嘆號！ 
-           ======================================================== */
+        /* 3. LCP 與 CLS 的完美平衡：隱形 0.8 秒掩護排版，若超時則強制浮現救手機版 LCP */
+        body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @keyframes forceShow { to { opacity: 1; } }
 
-        /* 3. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
+        /* 4. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
         @media screen and (min-width: 768px) {
             body:not(.close) main .content { left: 300px !important; transition: none !important; }
         }
@@ -69,14 +70,12 @@
         @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
         
         /* 無障礙高對比修正：解決文字對比度不足與外觀問題 */
+        /* 將連結文字設為繼承(保證對比度)，改用綠色加粗底線保留視覺特色 */
         .markdown-section a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-color: var(--theme-color, #42b983); }
         .markdown-section a:hover { text-decoration-color: transparent; }
+        /* 移除引用區塊的微透明背景，確保文字與底色對比度 100% 達標 */
         .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: var(--theme-color, #42b983); background-color: transparent; padding: 10px 15px; }
         .markdown-section em { color: inherit; font-style: italic; opacity: 1 !important; }
-
-        /* 載入中動畫設定 (給保底內容用的) */
-        .loading-text { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
     </style>
 
     <script type="application/ld+json">
@@ -102,9 +101,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <div class="loading-text">載入中，請稍候...</div>
-    </div>
+    <div id="app"></div>
 
     <script>
         window.$docsify = {

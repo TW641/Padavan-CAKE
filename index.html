@@ -39,14 +39,14 @@
     <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        /* 1. 穩定捲動條，避免右側閃爍 */
+        /* 1. 穩定捲動條，移除 overflow-y 讓瀏覽器系統接管捲軸 */
         html { scrollbar-gutter: stable; }
         
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
-        /* 3. LCP 與 CLS 的完美平衡：隱形 0.8 秒掩護排版，若超時則強制浮現救手機版 LCP */
-        body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+        /* 3. LCP 與 CLS 的完美平衡：縮短強制隱藏時間到 0.3 秒，避免手機版 LCP 超時扣分 */
+        body { opacity: 0; animation: forceShow 0.1s 0.3s forwards; }
         body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
         @keyframes forceShow { to { opacity: 1; } }
 
@@ -69,11 +69,10 @@
         .image-grid-2 img, .image-grid-3 img { margin-bottom: 0 !important; border: 1px solid #ccc; border-radius: 8px; width: 100%; height: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
         
-        /* 無障礙高對比修正：解決報告中 <em> 與 blockquote 顏色太淡被扣分的問題 */
-        /* ★ 唯一更動行：將 color 換成較深的 #25764d 以通過無障礙對比測試 */
-        .markdown-section a { color: #25764d; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+        /* 無障礙高對比修正：解決文字對比度不足與外觀問題 */
+        .markdown-section a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-color: var(--theme-color, #42b983); }
         .markdown-section a:hover { text-decoration-color: transparent; }
-        .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: #42b983; background-color: rgba(66, 185, 131, 0.05); padding: 10px 15px; }
+        .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: var(--theme-color, #42b983); background-color: transparent; padding: 10px 15px; }
         .markdown-section em { color: inherit; font-style: italic; opacity: 1 !important; }
     </style>
 
@@ -123,26 +122,41 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        document.querySelectorAll('ul, ol').forEach(list => {
-                            Array.from(list.childNodes).forEach(node => {
-                                const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
-                                const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
-                                if (isText || isInvalid) {
-                                    const wrapper = document.createElement('li');
-                                    list.insertBefore(wrapper, node);
-                                    wrapper.appendChild(node);
-                                }
-                            });
-                        });
-                        
-                        document.querySelectorAll('img').forEach(img => {
-                            img.setAttribute('loading', 'lazy');
-                            img.setAttribute('decoding', 'async');
-                        });
+                        // 使用 requestAnimationFrame + setTimeout 將所有 DOM 操作推遲
+                        // 確保畫面優先繪製，徹底釋放手機版主執行緒 (消滅 TBT 驚嘆號)
+                        requestAnimationFrame(() => {
+                            setTimeout(() => {
+                                // 1. 修復空白列表節點
+                                document.querySelectorAll('ul, ol').forEach(list => {
+                                    Array.from(list.childNodes).forEach(node => {
+                                        const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
+                                        const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
+                                        if (isText || isInvalid) {
+                                            const wrapper = document.createElement('li');
+                                            list.insertBefore(wrapper, node);
+                                            wrapper.appendChild(node);
+                                        }
+                                    });
+                                });
+                                
+                                // 2. 圖片效能最佳化
+                                document.querySelectorAll('.markdown-section img').forEach(img => {
+                                    img.setAttribute('loading', 'lazy');
+                                    img.setAttribute('decoding', 'async');
+                                });
 
-                        document.querySelectorAll('a.anchor').forEach(anchor => {
-                            const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
-                            anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
+                                // 3. 無障礙標籤
+                                document.querySelectorAll('.markdown-section a.anchor').forEach(anchor => {
+                                    const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
+                                    anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
+                                });
+
+                                document.querySelectorAll('.markdown-section a[target="_blank"]').forEach(link => {
+                                    if (!link.getAttribute('aria-label')) {
+                                        link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
+                                    }
+                                });
+                            }, 0);
                         });
                     });
                 }

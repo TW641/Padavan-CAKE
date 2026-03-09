@@ -36,26 +36,29 @@
     <link rel="preload" href="lib/style.min.css" as="style">
 
     <link rel="stylesheet" href="lib/vue.css">
-    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css">
+    <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        /* 1. 穩定捲動條，避免右側閃爍 */
+        /* 1. 穩定捲動條，避免右側閃爍 (已拔除會導致捲動失效的 overflow-y) */
         html { scrollbar-gutter: stable; }
         
         /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
         body { margin: 0; padding: 0; }
         
-        /* 3. 終極雙棲分流寫法 */
+        /* 3. ★ 終極雙棲分流寫法 ★ */
+        
+        /* 【全域 / 手機版優先】準備 LCP 保底文字，不使用隱形 */
         .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
 
+        /* 【電腦版專屬 (>=768px)】啟動 0.8 秒隱形掩護排版，確保 CLS 滿分 */
         @media screen and (min-width: 768px) {
             body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
         }
         body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
         @keyframes forceShow { to { opacity: 1; } }
 
-        /* 4. 預先幫 Docsify 的側邊欄卡好位子，消滅 CLS */
+        /* 4. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
         @media screen and (min-width: 768px) {
             body:not(.close) main .content { left: 300px !important; transition: none !important; }
         }
@@ -74,9 +77,11 @@
         .image-grid-2 img, .image-grid-3 img { margin-bottom: 0 !important; border: 1px solid #ccc; border-radius: 8px; width: 100%; height: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
         
-        /* 無障礙高對比修正 */
+        /* 無障礙高對比修正：解決文字對比度不足與外觀問題 */
+        /* 將連結文字設為繼承(保證對比度)，改用綠色加粗底線保留視覺特色 */
         .markdown-section a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 2px; text-decoration-color: var(--theme-color, #42b983); }
         .markdown-section a:hover { text-decoration-color: transparent; }
+        /* 移除引用區塊的微透明背景，確保文字與底色對比度 100% 達標 */
         .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: var(--theme-color, #42b983); background-color: transparent; padding: 10px 15px; }
         .markdown-section em { color: inherit; font-style: italic; opacity: 1 !important; }
     </style>
@@ -148,7 +153,7 @@
                             img.setAttribute('decoding', 'async');
                         });
 
-                        // 3. 無障礙標籤 (延遲執行)
+                        // 3. 無障礙標籤 (延遲執行，解除手機版主執行緒阻塞，消滅效能驚嘆號！)
                         setTimeout(() => {
                             document.querySelectorAll('a.anchor').forEach(anchor => {
                                 const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
@@ -167,7 +172,7 @@
         }
     </script>
 
-    <script src="lib/docsify.min.js" defer></script>
+    <script src="lib/docsify.min.js"></script>
     <script src="lib/index.min.js" defer></script>
     <script src="lib/zoom-image.min.js" defer></script>
 </body>

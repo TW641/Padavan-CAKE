@@ -39,11 +39,11 @@
     <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        /* 1. 穩定捲動條，並強制恢復系統原生捲軸 (使用 !important 拒絕 Docsify 劫持) */
-        html { scrollbar-gutter: stable; overflow-y: scroll !important; height: auto !important; }
+        /* 1. 穩定捲動條，避免右側閃爍 (移除 overflow-y: scroll 解決捲軸壞掉的問題) */
+        html { scrollbar-gutter: stable; }
         
-        /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，並確保 body 順應系統捲動 */
-        body { margin: 0; padding: 0; overflow-y: auto !important; height: auto !important; }
+        /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
+        body { margin: 0; padding: 0; }
         
         /* 3. LCP 與 CLS 的完美平衡：隱形 0.8 秒掩護排版，若超時則強制浮現救手機版 LCP */
         body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
@@ -124,38 +124,53 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        // 1. 修復空白列表節點 (同步執行，避免畫面閃爍 CLS)
-                        document.querySelectorAll('ul, ol').forEach(list => {
-                            Array.from(list.childNodes).forEach(node => {
-                                const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
-                                const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
-                                if (isText || isInvalid) {
-                                    const wrapper = document.createElement('li');
-                                    list.insertBefore(wrapper, node);
-                                    wrapper.appendChild(node);
-                                }
-                            });
-                        });
-                        
-                        // 2. 圖片效能最佳化 (同步執行)
-                        document.querySelectorAll('img').forEach(img => {
-                            img.setAttribute('loading', 'lazy');
-                            img.setAttribute('decoding', 'async');
-                        });
-
-                        // 3. 無障礙標籤 (延遲執行，解除手機版主執行緒阻塞，消滅效能驚嘆號！)
+                        // 【效能優化】將 DOM 操作放入 setTimeout，讓主畫面優先繪製，解決手機版效能驚嘆號
                         setTimeout(() => {
-                            document.querySelectorAll('a.anchor').forEach(anchor => {
-                                const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
-                                anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
+                            // 1. 修復空白列表節點
+                            document.querySelectorAll('ul, ol').forEach(list => {
+                                Array.from(list.childNodes).forEach(node => {
+                                    const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
+                                    const isInvalid = node.nodeType === 1 && !['li', 'script', 'template'].includes(node.tagName.toLowerCase());
+                                    if (isText || isInvalid) {
+                                        const wrapper = document.createElement('li');
+                                        list.insertBefore(wrapper, node);
+                                        wrapper.appendChild(node);
+                                    }
+                                });
+                            });
+                            
+                            // 2. 圖片效能最佳化
+                            document.querySelectorAll('img').forEach(img => {
+                                img.setAttribute('loading', 'lazy');
+                                img.setAttribute('decoding', 'async');
                             });
 
-                            document.querySelectorAll('a[target="_blank"]').forEach(link => {
-                                if (!link.getAttribute('aria-label')) {
-                                    link.setAttribute('aria-label', (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)');
+                            // ==========================================
+                            // 3. 無障礙標籤 (效能優化版：徹底分離讀取與寫入)
+                            // ==========================================
+                            
+                            // [階段 A：純讀取] 集中掃描所有節點，避免觸發重新排版
+                            const anchors = Array.from(document.querySelectorAll('a.anchor'));
+                            const anchorLabels = anchors.map(anchor => {
+                                return (anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落') + ' 的錨點連結';
+                            });
+
+                            const extLinks = Array.from(document.querySelectorAll('a[target="_blank"]'));
+                            const extLabels = extLinks.map(link => {
+                                return link.getAttribute('aria-label') ? null : (link.textContent.trim() || '外部連結') + ' (在新分頁開啟)';
+                            });
+
+                            // [階段 B：純寫入] 一次性集中寫入屬性，瞬間完成，確保 Docsify 捲動不會崩潰！
+                            anchors.forEach((anchor, i) => {
+                                anchor.setAttribute('aria-label', anchorLabels[i]);
+                            });
+
+                            extLinks.forEach((link, i) => {
+                                if (extLabels[i]) {
+                                    link.setAttribute('aria-label', extLabels[i]);
                                 }
                             });
-                        }, 150);
+                        }, 100);
                     });
                 }
             ]

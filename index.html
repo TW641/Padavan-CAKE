@@ -39,33 +39,37 @@
     <link rel="stylesheet" href="lib/style.min.css" title="docsify-darklight-theme" type="text/css"/>
 
     <style>
-        /* 效能最佳化：強制預留捲動條軌道，防止畫面跳動 (解決 CLS) */
-        html { scrollbar-gutter: stable; overflow-y: scroll !important; }
+        /* 1. 穩定捲動條，避免右側閃爍 */
+        html { scrollbar-gutter: stable; overflow-y: scroll; }
         
-        /* 徹底移除所有 opacity 隱形設定，並奪回 Docsify 對捲動的控制權 */
-        body, body:not(.ready), body.ready { 
-            margin: 0 !important; 
-            padding: 0 !important; 
-            overflow: visible !important; 
-            opacity: 1 !important; 
-        }
+        /* 2. 移除會搞壞 Docsify 版面的 overflow: visible，還原乾淨設定 */
+        body { margin: 0; padding: 0; }
         
-        #app { min-height: 100vh; }
+        /* 3. LCP 與 CLS 的完美平衡：隱形 0.8 秒掩護排版，若超時則強制浮現救手機版 LCP */
+        body { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @keyframes forceShow { to { opacity: 1; } }
 
+        /* 4. 預先幫 Docsify 的側邊欄卡好位子，徹底消滅 0.282 的位移 (CLS 歸零殺手鐧) */
+        @media screen and (min-width: 768px) {
+            body:not(.close) main .content { left: 300px !important; transition: none !important; }
+        }
+
+        #app { min-height: 100vh; }
         body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
         code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important; }
         .progress { display: none !important; }
+        
+        /* 圖片網格設定 */
         .markdown-section table { display: table; width: 100%; }
         .markdown-section td, .markdown-section th { word-break: break-word; }
         .markdown-section img { display: block; max-width: 100%; height: auto; }
-        
-        /* 圖片網格設定 */
         .image-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 15px 0; }
         .image-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 15px 0; }
         .image-grid-2 img, .image-grid-3 img { margin-bottom: 0 !important; border: 1px solid #ccc; border-radius: 8px; width: 100%; height: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         @media (max-width: 768px) { .image-grid-2, .image-grid-3 { grid-template-columns: 1fr; } }
         
-        /* 無障礙高對比修正：加深顏色，移除透明度，讓 Google 認可對比度 */
+        /* 無障礙高對比修正：解決報告中 <em> 與 blockquote 顏色太淡被扣分的問題 */
         .markdown-section a { color: var(--theme-color, #42b983); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
         .markdown-section a:hover { text-decoration-color: transparent; }
         .markdown-section blockquote { color: inherit; opacity: 1 !important; border-left-color: #42b983; background-color: rgba(66, 185, 131, 0.05); padding: 10px 15px; }
@@ -118,7 +122,6 @@
             plugins: [
                 (hook, vm) => {
                     hook.doneEach(() => {
-                        // 修正清單結構
                         document.querySelectorAll('ul, ol').forEach(list => {
                             Array.from(list.childNodes).forEach(node => {
                                 const isText = node.nodeType === 3 && node.nodeValue.trim() !== '';
@@ -131,15 +134,12 @@
                             });
                         });
                         
-                        // 圖片延遲載入
                         document.querySelectorAll('img').forEach(img => {
                             img.setAttribute('loading', 'lazy');
                             img.setAttribute('decoding', 'async');
                         });
 
-                        // 修正無障礙標籤
                         document.querySelectorAll('a.anchor').forEach(anchor => {
-                            // 移除 # 符號，讓語音朗讀更順暢
                             const titleText = anchor.parentElement ? anchor.parentElement.textContent.replace(/#/g, '').trim() : '段落';
                             anchor.setAttribute('aria-label', titleText + ' 的錨點連結');
                         });

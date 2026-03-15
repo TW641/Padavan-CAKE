@@ -2,6 +2,257 @@
 
 > [繁體中文](README_TW.md) | [简体中文](README_CN.md) | English
 
+<hr>
+
+<h2>⭐ Light up the Täht: A Final Tribute</h2>
+
+<blockquote>
+  <code><b><i>"The darker the night, the brighter the Täht."</i></b></code>
+</blockquote>
+
+<p>To the world, he was the unsung hero who silently ripped the excess latency out of the Internet. To the open-source community, he was a legend known as <b>dtaht</b> on Reddit and <b>@mtaht</b> on Twitter. But behind the code was a man born <b>Michael</b>, who chose to live as <b>Dave</b>, and gave everything to connect us all.</p>
+
+<p>As perhaps the final large-scale Padavan port for legacy devices, this project serves as a digital museum. Before his digital footprints fade into the void of the internet, there are forgotten stories—cold facts and warm lore—that must be preserved here.</p>
+
+<h3>📜 The Lore of an Internet Hero</h3>
+
+<ul>
+  <li>⚖️ <b>The Judge, The Hacker &amp; The "Disappointment":</b> Dave's father, Ron, was a respected municipal judge. Ironically, Ron once wrote that he was his own parents' "only disappointment" because he became a lawyer instead of an engineer. Decades later, Ron found himself equally baffled by his own son. Dave’s nomadic hacker lifestyle confused him. Ron would playfully grumble: <i>"Why don't you work for IBM? You've been <a href="https://blog.cerowrt.org/">fixing the internet and giving the technology away for free? Again?</a>"</i> But Dave wasn't chasing money; he was chasing a dream. Yet, Dave inherited his father's fierce sense of justice and critical thinking—a trait summarized by a tattooed ex-convict who once recognized Dave in a bar and bought him a beer, simply saying of Judge Ron: <i>"He was fair."</i><br><br></li>
+
+  <li>🎨 <b>The Mother's Gift: Art &amp; Music:</b> While Dave inherited his critical thinking from his father, his boundless creativity, nomadic spirit, and deep passion for music undoubtedly came from his mother, Beverly. She was an award-winning painter, an avid world traveler, and a generous patron of the arts who even opened her home to visiting symphony musicians. Dave’s identity as a "sci-fi folk musician" carrying his guitar everywhere was a beautiful continuation of her vibrant legacy.<br><br></li>
+
+  <li>⚾ <b>The Alternate Universe &amp; "Extra Innings":</b> Dave cherished a vivid childhood memory of driving home with his dad, screaming at the radio during a dramatic 19-inning Phillies baseball game. Years later, Dave discovered that specific game <i>never actually happened</i> that way. His beautiful conclusion: <i>"I can only conclude that it took place in some alternate universe that only he and I shared."</i> In 2012, as Ron was dying in a hospice, he began feverishly typing blog posts with just two fingers. Dave stepped in as his editor, realizing that for the first time since he was a boy, they were collaborating rather than arguing. <i>"I didn't realize that he was in a hurry,"</i> Dave later reflected in a heartbreaking eulogy, mourning the stories his dad left untold. Yet, he was profoundly grateful his father's life went into "extra innings," allowing them to finally understand each other before the end.<br><br></li>
+
+  <li>🌍 <b>The Nicaragua Origin:</b> The fight against bufferbloat wasn't born in a corporate lab. It started when Dave was building OpenWrt mesh networks for the <i>One Laptop per Child (OLPC)</i> project in Nicaragua. Facing severe latency in those harsh environments, he found his lifelong mission.<br><br></li>
+
+  <li>🐈 <b>The "International Man of Mystery":</b> Much of the core bufferbloat mitigation was coded in open-source pioneer Eric S. Raymond’s (ESR) basement. ESR fondly recalled Dave as the "International Man of Mystery" who would crash there as a nomad, charm all the household cats, and stubbornly swear he would one day beat his friends at the hardcore board game <i>Power Grid</i>. ESR joked that if Dave earned a cent for every dollar of value he generated for the internet, he could have <i>"bought the entire country of Nicaragua and had enough left over to finance a space program."</i><br><br></li>
+
+  <li>⚔️ <b>The FCC Crusader &amp; The Code You Use:</b> When the FCC threatened to lock down router firmware in 2015, Dave rallied internet pioneers to fight back. Without his crusade, custom firmware ports like this Padavan project wouldn't even be legally possible today. As John Carmack (creator of <i>DOOM</i>) famously tweeted upon his passing: <b>"There is a very good chance your packets flow through some code he wrote."</b><br><br></li>
+
+  <li>🕯️ <b>Coding Through the Dark (Mike &amp; Michael):</b> In his final days in a hospice, Ron (born Mike) barely managed to type with two fingers, feverishly advocating for the Affordable Care Act. Though wealthy, he fought because he wanted the best healthcare for <i>everyone</i>. Decades later, his son Dave (born Michael) dragged a body plagued by Multiple Sclerosis and partial blindness to continuously code algorithms like CAKE, giving the best internet to <i>everyone</i> for free. Both men lived up to their family surname, <b>"Täht"</b> (which means <b>"Star"</b> in Estonian).</li>
+</ul>
+
+<br>
+
+<blockquote>
+  <code><b><i>Though Täht's physical world gradually faded into darkness, our digital universe continues to shine brightly because of him.</i></b></code>
+</blockquote>
+
+<br>
+
+<h3>🌠 "We Are All Starstuff" (The Final Reunion)</h3>
+
+<p>There is a heartbreaking, yet incredibly beautiful timeline to Dave's family.</p>
+
+<p>On June 9, 2012, sitting by his late father Ron's side in his final hours, Dave wrote on his blog:</p>
+
+<blockquote>
+  <i>"Of all these things, the one viewpoint I was sure of, the one thing I believe to be true of an afterlife, such as it is, was this: "</i><br><br>
+  <i>"<code><b><i>That yes, we are all starstuff.</i></b></code>"</i><br><br>
+  <i><b>"And it made me cry to think it through."</b></i>
+</blockquote>
+
+<p>On January 11, 2025, his mother Beverly passed away peacefully at her home, surrounded by loved ones.</p>
+
+<p>Less than three months later, on April 1, 2025, Dave's own lifelong game went into its final "extra innings."</p>
+
+<p>He passed away at the age of 59, joining his parents.</p>
+
+<blockquote>
+  <code><b><i>In life, they were Stars illuminating the world.</i></b></code><br><br>
+  <code><b><i>In death, they are Starstuff illuminating the universe.</i></b></code>
+</blockquote>
+
+<h3>🎼 Coda: The Grand Finale (Dave's Guitar &amp; Fool)</h3>
+
+<p>Dave was a sci-fi folk musician who carried his guitar—famously bearing a sticker that read <i>"This guitar kills Vogons"</i>—everywhere. He bonded with people just as much over music as he did over code. To honor his vibrant soul, <b>OpenWrt officially named their 25.12.0 release "Dave's Guitar."</b></p>
+
+<p>Poetically, the legendary Taiwanese rock band Mayday (whose anniversary is March 29) has an iconic anthem called <a href="https://youtu.be/1j_mpwKmlJg"><b>《憨人》 (<i>Fool</i>)</b></a>. Just three days after their anniversary, on April Fools' Day, Dave passed away.</p>
+
+<p>On March 29, 2020, Mayday's lead singer Ashin wrote a touching post revealing the profound mystery hidden within the Chinese title <b>《憨人》 (Fool)</b>. For engineers and hackers around the world, this is the most beautiful equation of humanity:</p>
+
+<br>
+
+<blockquote>
+  <p align="center">💻 <code><b><i>憨 (Fool) = 敢 (Courage) + 心 (Heart)</i></b></code></p>
+</blockquote>
+
+<br>
+
+<p>Ashin wrote:</p>
+
+<blockquote>
+  <i>"That year, I suddenly realized that the character for <code><b><i>'Fool' (憨) is made of 'Courage' (敢) placed over a 'Heart' (心).</i></b></code>"</i><br><br>
+  <i>"Then, inspiration led me to write this song..."</i><br><br>
+  <i>"<code><b><i>Let us bring this song to the courageous you, let's meet when the dawn comes.</i></b></code>"</i>
+</blockquote>
+
+<p>This song is the absolute reflection of Dave's life. He refused the "sky full of gold" to give his algorithms (<code>FQ-CoDel</code> &amp; <code>CAKE</code>) away for free. To let the global open-source community sing along with Dave's spirit, here are the full lyrics in 4 languages, completely unabridged: Traditional Chinese, Taiwanese Romanization, English, and Official Japanese.</p>
+
+<details>
+<summary><b>🎤 Click to expand the full 4-Language Lyrics of "Fool" (憨人) to sing along</b></summary>
+
+<blockquote>
+<b>我的心內感覺 人生的沈重 不敢來振動</b><br>
+<i>Gua e sim-lai kam-kak lin-sing e tim-tang, M-kann lai tin-tang</i><br>
+<i>(In my heart I feel how much seriousness there is in life, I don’t dare touch it)</i><br>
+<i>(僕の心は 人生の重みに 動くことを躊躇してる)</i><br><br>
+
+<b>我不是好子 嘛不是歹人 我只是愛眠夢</b><br>
+<i>Gua m-si ho kiann mah m-si phainn-lang, Gua tsi-si ai bin-bang</i><br>
+<i>(I’m not a good person, but I’m also not a bad person, I’m just someone who loves to dream)</i><br>
+<i>(僕はいいやつでも 悪いやつでもない ただ夢見がちなだけなんだ)</i><br><br>
+
+<b>我不願隨浪隨風 飄浪西東 親像船無港</b><br>
+<i>Gua m-guan sui ing sui hong phiau long se tang, Tshin-tshiunn tsun bo kang</i><br>
+<i>(I’m not willing to float with the tide, Like a drifting boat that cannot find a harbor)</i><br>
+<i>(波と風にまかせ あてもなく漂うなんて嫌だ 行き着く港のない船のように)</i><br><br>
+
+<b>我不願做人 奸巧鑽縫 甘願來作憨人</b><br>
+<i>Gua m-guan tsue lang kan khiau lang pang, Kam-guan lai tsue gong lang</i><br>
+<i>(I don’t want to be a devious opportunist, I’d rather be a fool)</i><br>
+<i>(僕は器用になんて生きたくない 不器用でいい)</i><br><br>
+
+<b>我不是頭腦空空 我不是一隻米蟲</b><br>
+<i>Gua m-si thau-nau khang khang, Gua m-si tsit tsiah bi-thang</i><br>
+<i>(It’s not that my head is empty, It’s not that I’m useless)</i><br>
+<i>(僕は頭が空っぽでも 怠け者でもない)</i><br><br>
+
+<b>人啊人 一世人 要安怎歡喜 過春夏秋冬</b><br>
+<i>Lang ah lang tsit si lang, Beh an-tsuann huann-hi kue tshun-ha tshiu-tang</i><br>
+<i>(People, oh! A lifetime is so long, How can we happily pass the years)</i><br>
+<i>(人の一生って どうやって楽しく 春夏秋冬を過ごすかさ)</i><br><br>
+
+<b>我有我的路 有我的夢 夢中的那個世界 甘講伊是一場空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走過的路 只有希望 希望你我講過的話 放在心肝內 總有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が話したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>看到滿天全金條 要煞無半項 環境來戲弄</b><br>
+<i>Khuann-kau mua-thinn tsuan kim-tiau beh suah bo puann hang, Khuan-king lai hi-lang</i><br>
+<i>(Seeing gold dance through the sky, I reach out for it but grasp nothing, It’s like fate mocking me)</i><br>
+<i>(空いっぱいのダイヤも 一つだってつかめない 神様のいたずらで)</i><br><br>
+
+<b>背景無夠強 天才無夠弄 逐項是攏輸人</b><br>
+<i>Pue-king bo kau kiong thian-tsai bo kau lang, Tak-hang si long su lang</i><br>
+<i>(My background’s not good enough, my talent’s not used enough, In everything I lose to other people)</i><br>
+<i>(生まれも 才能もたいしたことない 勝てるものなんて無い)</i><br><br>
+
+<b>只好看破這虛華 不怕路歹行 不怕大雨淋</b><br>
+<i>Tsi-ho khuann-phua tse hi-hua, M-kiann loo phainn-kiann, M-kiann tua hoo lam</i><br>
+<i>(I’d best see through all this false splendor, I'm unafraid of how difficult the road ahead may be, And unafraid of being drenched in the rain)</i><br>
+<i>(虚栄を見抜き 険しい道 大雨を恐れないだけさ)</i><br><br>
+
+<b>心上一字敢 面對我的夢 甘願來作憨人</b><br>
+<i>Sim siong tsit li kam bin-tui gua e bang, Kam guan lai tsue gong lang</i><br>
+<i>(On my heart, there is one word daring, when confronting my dreams, I’m willing to be a fool)</i><br>
+<i>(心には勇敢の文字 夢に向って 不器用でいい)</i><br><br>
+
+<b>我不是頭腦空空 我不是一隻米蟲</b><br>
+<i>Gua m-si thau-nau khang khang, Gua m-si tsit tsiah bi-thang</i><br>
+<i>(It’s not that my head is empty, It’s not that I’m useless)</i><br>
+<i>(僕は頭が空っぽでも 怠け者でもない)</i><br><br>
+
+<b>人啊人 一世人 要安怎歡喜 過春夏秋冬</b><br>
+<i>Lang ah lang tsit si lang, Beh an-tsuann huann-hi kue tshun-ha tshiu-tang</i><br>
+<i>(People, oh! A lifetime is so long, How can we happily pass the years)</i><br>
+<i>(人の一生って どうやって楽しく 春夏秋冬を過ごすかさ)</i><br><br>
+
+<b>我有我的路 有我的夢 夢中的那個世界 甘講伊是一場空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走過的路 只有希望 希望你我講過的話 放在心肝內 總有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が話したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>我有我的路 有我的夢 夢中的那個世界 甘講伊是一場空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走過的路 只有希望 希望你我講過的話 放在心肝內 總有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が話したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>我知影總會有一天</b><br>
+<i>Gua tsi ing tsong u tsit-kang</i><br>
+<i>(I know that there will always be a day)</i><br>
+<i>(分かってる いつかその日が来るって)</i><br><br>
+
+<b>啦～啦～啦～啦～</b><br>
+<i>La～La～La～La～</i><br>
+<i>(La～La～La～La～)</i><br>
+<i>(声を聞かせて)</i><br><br>
+
+<b>我有我的路 我有我的夢</b><br>
+<i>Gua u gua e loo, gua u gua e bang</i><br>
+<i>(I have my road, I have my dreams)</i><br>
+<i>(僕には僕の道が 夢がある)</i><br><br>
+
+<b>總會有一天 總會有一天</b><br>
+<i>Tsong u tsit-kang, tsong u tsit-kang</i><br>
+<i>(One day... One day...)</i><br>
+<i>(いつの日かきっと... いつの日かきっと...)</i>
+</blockquote>
+
+</details>
+<br>
+
+<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img src="https://tw641.github.io/Mayday-Fool.jpg" alt="MAYDAY - Fool Live"></a><br>
+<i>(🎧 Click the image to listen to the Live Version of "Fool")</i></p>
+
+<p>If his monumental work has ever improved your network, please honor this brilliant, selfless "Fool" by <b>Lighting up the "Star"</b> in the top-right corner of this repository.</p>
+
+<p><i>Let's keep his Star shining bright in the open-source world, guiding packets through the dark.</i><br>
+<i>His physical journey has ended, but as an old friend who bonded with him over music perfectly bid him farewell: </i></p>
+
+<blockquote>
+  <b>"Happy travels, amigo!"</b>
+</blockquote>
+
+<p><i>The global open-source community will carry his CAKE legacy forward:</i></p>
+
+<blockquote>
+  <b>(I have my own path, I have my own dream. One day... echoing through Dave's Guitar 🎸)</b>
+</blockquote>
+
+<br>
+
+<hr>
+
+<h3>🔗 References &amp; Tributes</h3>
+<ul>
+  <li><b>Dave's Starstuff Quote (2012):</b> <a href="https://ronsravings.blogspot.com/2012/06/rip-ron-taht.html?showComment=1339262388498#c3179985587009391271">Ron's Ravings Blog Comments</a></li>
+  <li><b>Ron at Hope Hospice (2012):</b> <a href="https://ronsravings.blogspot.com/2012/05/ron-at-hope-hospice.html">Ron's Ravings: Ron at Hope Hospice</a></li>
+  <li><b>Extra Innings Eulogy &amp; The Alternate Universe (2012):</b> <a href="https://ronsravings.blogspot.com/2012/10/memorial-service-eulogy.html">Eulogy - "Extra Innings"</a></li>
+  <li><b>Ron's Disappointment (2011):</b> <a href="https://ronsravings.blogspot.com/2011/10/normal-0-microsoftinternetexplorer4.html">The republicans admit to being half wrong...</a></li>
+  <li><b>Beverly Taht Joins Ron (2025):</b> <a href="https://ronsravings.blogspot.com/2025/01/beverly-taht-joins-ron.html">Ron's Ravings: Beverly Taht Joins Ron</a></li>
+  <li><b>CeroWrt Blog (Fixing the internet for free):</b> <a href="https://blog.cerowrt.org/">blog.cerowrt.org</a></li>
+  <li><b>Doc Searls Weblog (2025):</b> <a href="https://doc.searls.com/2025/04/01/remembering-dave-taht/">Remembering Dave Taht (This guitar kills Vogons)</a></li>
+  <li><b>"Happy travels, amigo!" (Friend's Farewell):</b> <a href="https://doc.searls.com/2025/04/01/remembering-dave-taht/#comment-33744">Doc Searls Weblog Comments (stu z)</a></li>
+  <li><b>Eric S. Raymond's Tribute (2025):</b> <a href="https://x.com/esrtweet/status/1907401538093416621">X (Twitter) @esrtweet</a></li>
+  <li><b>John Carmack's Tribute (2025):</b> <a href="https://x.com/ID_AA_Carmack/status/1907459628897587216">X (Twitter) @ID_AA_Carmack</a></li>
+  <li><b>The Philosophy of "Fool" (憨):</b> <a href="https://www.facebook.com/ashin555/videos/%E6%86%A8%E4%BA%BA/234790114390923/">Mayday Ashin's Facebook Post (2020)</a></li>
+  <li><b>The Anthem of the "Fool" (憨人) - Mayday:</b>
+    <ul>
+      <li>🎸 <a href="https://www.youtube.com/watch?v=olGod8i1j1o">Official Live Video (BinMusic, 2020)</a></li>
+      <li>🎬 <a href="https://www.youtube.com/watch?v=1j_mpwKmlJg">Official Music Video HD (ROCK RECORDS, 2012)</a></li>
+      <li>🎧 <a href="https://www.youtube.com/watch?v=lYRDRtS55b8">Pure Audio Track (Mayday - Topic, 2014)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
 ## 🏆 🇹🇼 World Premiere! Taiwan No.1! 🇹🇼
 
 ## 🚀 Improve Network Latency! TW641 Ported CAKE (sch_cake) Padavan Router Firmware: Cloud Compilation Guide (Supports 142 Models)

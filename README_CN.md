@@ -2,6 +2,260 @@
 
 > [繁體中文](README_TW.md) | 简体中文 | [English](README.md)
 
+<hr>
+
+<h2>⭐ 点亮星辰：最后的致敬</h2>
+
+<blockquote>
+  <code><b><i>“夜愈暗，星星 (Täht) 就愈亮。”</i></b></code>
+</blockquote>
+
+<p>对这个世界而言，他是位默默将网络过高延迟拔除的无名英雄。对开源社区来说，他是 Reddit 上的 <b>dtaht</b>、Twitter 上的 <b>@mtaht</b> 传奇。但在这些代码背后，他是一个出生名为 <b>Michael</b>，却选择以 <b>Dave</b> 之名活着，并为了连接我们所有人而奉献一切的男人。</p>
+
+<p>这或许是旧世代设备最后一个大规模的 Padavan 移植项目，它同时也像是一座数字博物馆。在他留下的数字足迹消散于互联网的虚无之前，这里必须保存下那些被遗忘的故事——无论是冰冷的技术事实，还是温暖的传奇事迹。</p>
+
+<h3>📜 一位互联网英雄的传奇故事</h3>
+
+<ul>
+  <li>⚖️ <b>法官、黑客与“令人失望的孩子”：</b>Dave 的父亲 Ron 是一位受人尊敬的市政法官。讽刺的是，Ron 曾写道他是自己父母“唯一的失望”，因为他成了律师而不是工程师。几十年后，Ron 发现自己同样对亲生儿子感到困惑。Dave 游牧般的黑客生活方式让他不解，Ron 常半开玩笑地抱怨：“你为什么不去 IBM 上班？你又在<a href="https://blog.cerowrt.org/">免费修复网络还把技术白白送人？又来了？</a>”但 Dave 追求的不是金钱，而是梦想。然而，Dave 继承了父亲强烈的正义感与批判性思考能力——这项特质曾被一位满身刺青的前科犯总结过；那人有次在酒吧认出 Dave 并请他喝了杯啤酒，对法官 Ron 只说了一句：“他很公正。”<br><br></li>
+
+  <li>🎨 <b>母亲的礼物：艺术与音乐：</b>Dave 从父亲那里继承了批判性思考，但他无边的创造力、游牧精神以及对音乐的深厚热爱，无疑是来自他的母亲 Beverly。她是一位屡获殊荣的画家、热爱环游世界的旅人，也是慷慨的艺术赞助者，甚至曾敞开家门接待来访的交响乐团音乐家。Dave 带着吉他四处流浪的“科幻民谣音乐人”身份，正是她充满活力之遗产的最美延续。<br><br></li>
+
+  <li>⚾ <b>平行宇宙与“延长赛”：</b>Dave 珍藏着一段生动的童年回忆：他和爸爸开车回家时，对着收音机里一场戏剧性的 19 局费城人队棒球赛大声狂吼。几年后，Dave 发现那场特定的比赛<b>其实根本不是那样发生的</b>。他得出了极美的结论：“我只能推论，这件事发生在只有我和他共享的某个平行宇宙里。”2012 年，当 Ron 在安宁病房临终前，他开始狂热地用两根手指敲打着博客文章。Dave 成了他的编辑，并意识到自从他还是个小男孩以来，这是他们第一次合作而不是争吵。“我不知道他原来赶着时间，”Dave 后来在一篇令人心碎的悼词中回忆道，哀悼着父亲未及诉说的故事。然而，他无比感激父亲的生命进入了“延长赛”，让他们能在最后一刻终于理解了彼此。<br><br></li>
+
+  <li>🌍 <b>尼加拉瓜的起源：</b>对抗缓冲膨胀 (Bufferbloat) 的战役并非诞生于企业实验室。它始于 Dave 在尼加拉瓜为<b>“每个孩子一台笔记本电脑 (OLPC)”</b>项目建置 OpenWrt 网状网络的时候。在那些严苛的环境中面对严重的网络延迟，他找到了自己一生的使命。<br><br></li>
+
+  <li>🐈 <b>“国际神秘客”：</b>许多核心的缓冲膨胀缓解代码，都是在开源先驱 Eric S. Raymond (ESR) 的地下室里写出来的。ESR 深情地回忆 Dave 就像个“国际神秘客”，他会像游牧民族一样来借宿，迷倒家里所有的猫，还固执地发誓总有一天要在硬核桌游<b>《电力公司 (Power Grid)》</b>中击败朋友们。ESR 开玩笑说，如果 Dave 为互联网创造的每一美元价值能让他赚进一分钱，他就能“买下整个尼加拉瓜，而且剩下的钱还足够资助一个太空计划”。<br><br></li>
+
+  <li>⚔️ <b>FCC 十字军与你正在使用的代码：</b>2015 年，当美国联邦通信委员会 (FCC) 威胁要锁死路由器固件时，Dave 号召了互联网先驱们起身反抗。若没有他当年的抗争，像这个 Padavan 项目这样的自定义固件，在今天甚至在法律上都是不可能存在的。正如<b>《毁灭战士 (DOOM)》</b>创作者 John Carmack 在 Dave 过世时那句著名的推文：<b>“你传送的数据包，有很高的机率流经了他写的代码。”</b><br><br></li>
+
+  <li>🕯️ <b>在黑暗中写代码 (Mike 与 Michael)：</b>Ron（出生名 Mike）在安宁病房的最后日子里，勉强用两根手指打字，狂热地倡导着《平价医疗法案》。尽管家境富裕，他仍努力奋战，因为他希望<b>所有人</b>都能获得最好的医疗保健。几十年后，他的儿子 Dave（出生名 Michael）拖着被多发性硬化症与部分失明折磨的身躯，持续编写着像 CAKE 这样的算法，将最好的网络免费送给<b>所有人</b>。这两个男人都无愧于他们的家族姓氏 <b>"Täht"</b>（在爱沙尼亚语中意为<b>“星星”</b>）。</li>
+</ul>
+
+<br>
+
+<blockquote>
+  <code><b><i>（尽管 Täht 的物理世界逐渐褪入黑暗，我们的数字宇宙却因为他而持续闪耀着。）</i></b></code>
+</blockquote>
+
+<br>
+
+<h3>🌠 “我们都是星尘”—— 最终的团聚</h3>
+
+<p>Dave 的家庭有一段令人心碎，却又无比美丽的时间线。</p>
+
+<p>2012 年 6 月 9 日，Dave 坐在已故父亲 Ron 身旁陪伴他度过最后时光，在博客写下：</p>
+
+<blockquote>
+  <i>“在所有这些事情中，我确信的一个观点，一个我认为死后世界如果是真的话，那就是：”</i><br><br>
+  <i>"<code><b><i>（是的，我们都是星尘。）</i></b></code>"</i><br><br>
+  <i><b>“这让我一想到就忍不住落泪。”</b></i>
+</blockquote>
+
+<p>2025 年 1 月 11 日，他的母亲 Beverly 在挚爱家人的陪伴下，于家中平静辞世。</p>
+
+<p>不到三个月后，2025 年 4 月 1 日，Dave 自己一生的比赛也进入了最后的“延长赛”。</p>
+
+<p>他在 59 岁时离世，与父母团聚。</p>
+
+<blockquote>
+  <code><b><i>（在世时，他们是照亮世界的星星。）</i></b></code><br><br>
+  <code><b><i>（逝世后，他们是点亮宇宙的星尘。）</i></b></code>
+</blockquote>
+
+<h3>🎼 终章：盛大的落幕 — Dave 的吉他与憨人</h3>
+
+<p>Dave 是一位科幻民谣音乐人，他总是带着他的吉他四处走动——那把吉他上贴着著名的贴纸：“这把吉他能杀死佛贡人 (Vogons)”。他通过音乐与人建立的连接，丝毫不亚于通过代码。为了纪念他充满活力的灵魂，<b>OpenWrt 官方将其 25.12.0 版本命名为 "Dave's Guitar"</b>。</p>
+
+<p>充满诗意的是，台湾传奇摇滚乐团五月天（成军纪念日为 3 月 29 日）有一首标志性的神曲叫 <a href="https://youtu.be/1j_mpwKmlJg"><b>《憨人》 (<i>Fool</i>)</b></a>。就在他们纪念日的短短三天后，在愚人节 (April Fools' Day) 当天，Dave 离开了我们。</p>
+
+<p>2020 年 3 月 29 日，五月天主唱阿信写下了一篇动人的贴文，揭示了中文曲名<b>《憨人》 (Fool)</b> 里隐藏的深刻奥秘。对全世界的工程师与黑客来说，这是人性中最美的方程式：</p>
+
+<br>
+
+<blockquote>
+  <p align="center">💻 <code><b><i>憨 (Fool) = 敢 (Courage) + 心 (Heart)</i></b></code></p>
+</blockquote>
+
+<br>
+
+<p>阿信写道：</p>
+
+<blockquote>
+  <i>“那年，突然发现代表着愚笨的<code><b><i>‘憨’字，是‘心’上一个‘敢’。</i></b></code>”</i><br><br>
+  <i>“然后灵感带我写下了这首歌……”</i><br><br>
+  <i>“<code><b><i>让我们为你带来这首‘憨人’，与勇敢的你，约在曙光来临之时。</i></b></code>”</i>
+</blockquote>
+
+<p>这首歌绝对是 Dave 一生的真实写照。他拒绝了“满天全金条（满天的财富）”，选择将他的算法（<code>FQ-CoDel</code> 与 <code>CAKE</code>）免费白白送人。为了让全球开源社区能随着 Dave 的精神一起高唱，以下是完整未删减的 4 种语言歌词：简体中文、台语罗马拼音、英文与官方日文。</p>
+
+<details>
+<summary><b>🎤 点击展开 4 种语言《憨人》完整歌词</b></summary>
+
+<blockquote>
+<b>我的心内感觉 人生的沉重 不敢来振动</b><br>
+<i>Gua e sim-lai kam-kak lin-sing e tim-tang, M-kann lai tin-tang</i><br>
+<i>(In my heart I feel how much seriousness there is in life, I don’t dare touch it)</i><br>
+<i>(僕の心は 人生の重みに 動くことを躊躇してる)</i><br><br>
+
+<b>我不是好子 嘛不是歹人 我只是爱眠梦</b><br>
+<i>Gua m-si ho kiann mah m-si phainn-lang, Gua tsi-si ai bin-bang</i><br>
+<i>(I’m not a good person, but I’m also not a bad person, I’m just someone who loves to dream)</i><br>
+<i>(僕はいいやつでも 悪いやつでもない ただ夢見がちなだけなんだ)</i><br><br>
+
+<b>我不愿随浪随风 飘浪西东 亲像船无港</b><br>
+<i>Gua m-guan sui ing sui hong phiau long se tang, Tshin-tshiunn tsun bo kang</i><br>
+<i>(I’m not willing to float with the tide, Like a drifting boat that cannot find a harbor)</i><br>
+<i>(波と風にまかせ あてもなく漂うなんて嫌だ 行き着く港のない船のように)</i><br><br>
+
+<b>我不愿做人 奸巧钻缝 甘愿来作憨人</b><br>
+<i>Gua m-guan tsue lang kan khiau lang pang, Kam-guan lai tsue gong lang</i><br>
+<i>(I don’t want to be a devious opportunist, I’d rather be a fool)</i><br>
+<i>(僕は器用になんて生きたくない 不器用でいい)</i><br><br>
+
+<b>我不是头脑空空 我不是一只米虫</b><br>
+<i>Gua m-si thau-nau khang khang, Gua m-si tsit tsiah bi-thang</i><br>
+<i>(It’s not that my head is empty, It’s not that I’m useless)</i><br>
+<i>(僕は頭が空っぽでも 怠け者でもない)</i><br><br>
+
+<b>人啊人 一世人 要安怎欢喜 过春夏秋冬</b><br>
+<i>Lang ah lang tsit si lang, Beh an-tsuann huann-hi kue tshun-ha tshiu-tang</i><br>
+<i>(People, oh! A lifetime is so long, How can we happily pass the years)</i><br>
+<i>(人の一生って どうやって楽しく 春夏秋冬を過ごすかさ)</i><br><br>
+
+<b>我有我的路 有我的梦 梦中的那个世界 甘讲伊是一场空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走过的路 只有希望 希望你我讲过的话 放在心肝内 总有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が话说したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>看到满天全金条 要煞无半项 环境来戏弄</b><br>
+<i>Khuann-kau mua-thinn tsuan kim-tiau beh suah bo puann hang, Khuan-king lai hi-lang</i><br>
+<i>(Seeing gold dance through the sky, I reach out for it but grasp nothing, It’s like fate mocking me)</i><br>
+<i>(空いっぱいのダイヤも 一つだってつかめない 神様のいたずらで)</i><br><br>
+
+<b>背景无够强 天才无够弄 逐项是拢输人</b><br>
+<i>Pue-king bo kau kiong thian-tsai bo kau lang, Tak-hang si long su lang</i><br>
+<i>(My background’s not good enough, my talent’s not used enough, In everything I lose to other people)</i><br>
+<i>(生まれも 才能もたいしたことない 勝てるものなんて無い)</i><br><br>
+
+<b>只好看破这虚华 不怕路歹行 不怕大雨淋</b><br>
+<i>Tsi-ho khuann-phua tse hi-hua, M-kiann loo phainn-kiann, M-kiann tua hoo lam</i><br>
+<i>(I’d best see through all this false splendor, I'm unafraid of how difficult the road ahead may be, And unafraid of being drenched in the rain)</i><br>
+<i>(虚栄を見抜き 険しい道 大雨を恐れないだけさ)</i><br><br>
+
+<b>心上一字敢 面对我的梦 甘愿来作憨人</b><br>
+<i>Sim siong tsit li kam bin-tui gua e bang, Kam guan lai tsue gong lang</i><br>
+<i>(On my heart, there is one word daring, when confronting my dreams, I’m willing to be a fool)</i><br>
+<i>(心には勇敢の文字 夢に向って 不器用でいい)</i><br><br>
+
+<b>我不是头脑空空 我不是一只米虫</b><br>
+<i>Gua m-si thau-nau khang khang, Gua m-si tsit tsiah bi-thang</i><br>
+<i>(It’s not that my head is empty, It’s not that I’m useless)</i><br>
+<i>(僕は頭が空っぽでも 怠け者でもない)</i><br><br>
+
+<b>人啊人 一世人 要安怎欢喜 过春夏秋冬</b><br>
+<i>Lang ah lang tsit si lang, Beh an-tsuann huann-hi kue tshun-ha tshiu-tang</i><br>
+<i>(People, oh! A lifetime is so long, How can we happily pass the years)</i><br>
+<i>(人の一生って どうやって楽しく 春夏秋冬を過ごすかさ)</i><br><br>
+
+<b>我有我的路 有我的梦 梦中的那个世界 甘讲伊是一场空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走过的路 只有希望 希望你我讲过的话 放在心肝内 总有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が話したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>我有我的路 有我的梦 梦中的那个世界 甘讲伊是一场空</b><br>
+<i>Gua u gua e loo u gua e bang, Bang-tiong e hit e se-kai kam kong i si tsit tiunn khong</i><br>
+<i>(I have my road, I have my dreams, Is it possible the world of my dreams is just an illusion?)</i><br>
+<i>(僕には僕の道が 夢がある 夢の中のあの世界は まさかまぼろし？)</i><br><br>
+
+<b>我走过的路 只有希望 希望你我讲过的话 放在心肝内 总有一天</b><br>
+<i>Gua kiann kue e loo tsi-u hi-bang, Hi-bang li gua kong ke e ue pang tsai sim-kuann lai tsong u tsit-kang</i><br>
+<i>(On the road that I’ve traveled, I only have hope, Hope that all we’ve talked about is in our hearts, believing one day it will all come true)</i><br>
+<i>(僕が歩んできた道には 希望だけが 僕が話したことを 心にとめておいて いつの日かきっと)</i><br><br>
+
+<b>我知影总有一天</b><br>
+<i>Gua tsi ing tsong u tsit-kang</i><br>
+<i>(I know that there will always be a day)</i><br>
+<i>(分かってる いつかその日が来るって)</i><br><br>
+
+<b>啦～啦～啦～啦～</b><br>
+<i>La～La～La～La～</i><br>
+<i>(La～La～La～La～)</i><br>
+<i>(声を聞かせて)</i><br><br>
+
+<b>我有我的路 我有我的梦</b><br>
+<i>Gua u gua e loo, gua u gua e bang</i><br>
+<i>(I have my road, I have my dreams)</i><br>
+<i>(僕には僕の道が 夢がある)</i><br><br>
+
+<b>总有一天 总有一天</b><br>
+<i>Tsong u tsit-kang, tsong u tsit-kang</i><br>
+<i>(One day... One day...)</i><br>
+<i>(いつの日かきっと... いつの日かきっと...)</i>
+</blockquote>
+
+</details>
+<br>
+
+<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img src="https://tw641.github.io/Mayday-Fool.jpg" alt="MAYDAY - Fool Live"></a><br>
+<i>(🎧 点击图片聆听《憨人》万人合唱版)</i></p>
+
+<p>如果他这项不朽的杰作曾经改善过您的网络，请点击这个项目右上角的 <b>"Star (星星)"</b> 来点亮它，以纪念这位才华横溢、无私奉献的“憨人”。</p>
+
+<p>让我们让他的星星在开源世界里持续闪耀，在黑暗中引导着数据包前行。<br>
+他的物理旅程已经结束，但正如一位与他因音乐结缘的老朋友，对他所作出的最完美告别：</p>
+
+<blockquote>
+  <b>“旅途愉快，老朋友！”</b>
+</blockquote>
+
+<p>全球的开源社区将带着他的 CAKE 遗产继续前进：</p>
+
+<blockquote>
+  <b>“我有我的路 我有我的梦，总有一天... 弹奏着 Dave's Guitar 🎸”</b><br>
+  <i>(Gua u gua e loo, gua u gua e bang, tsong u tsit-kang... tuann-tsau Dave's Guitar 🎸)</i><br>
+  <i><b>(I have my own path, I have my own dream. One day... echoing through Dave's Guitar 🎸)</b></i><br>
+  <i>(僕には僕の道が 夢がある。いつの日かきっと... Dave's Guitar 🎸 を奏でながら)</i>
+</blockquote>
+
+<br>
+
+<hr>
+
+<h3>🔗 参考文献与致敬</h3>
+<ul>
+  <li><b>Dave 的星尘语录 (2012):</b> <a href="https://ronsravings.blogspot.com/2012/06/rip-ron-taht.html?showComment=1339262388498#c3179985587009391271">Ron's Ravings Blog Comments</a></li>
+  <li><b>Ron 于安宁病房 (2012):</b> <a href="https://ronsravings.blogspot.com/2012/05/ron-at-hope-hospice.html">Ron's Ravings: Ron at Hope Hospice</a></li>
+  <li><b>“延长赛”悼词与平行宇宙 (2012):</b> <a href="https://ronsravings.blogspot.com/2012/10/memorial-service-eulogy.html">Eulogy - "Extra Innings"</a></li>
+  <li><b>Ron 的“唯一失望” (2011):</b> <a href="https://ronsravings.blogspot.com/2011/10/normal-0-microsoftinternetexplorer4.html">The republicans admit to being half wrong...</a></li>
+  <li><b>Beverly 辞世与 Ron 团聚 (2025):</b> <a href="https://ronsravings.blogspot.com/2025/01/beverly-taht-joins-ron.html">Ron's Ravings: Beverly Taht Joins Ron</a></li>
+  <li><b>CeroWrt 博客 (免费修复网络):</b> <a href="https://blog.cerowrt.org/">blog.cerowrt.org</a></li>
+  <li><b>Doc Searls Weblog (2025):</b> <a href="https://doc.searls.com/2025/04/01/remembering-dave-taht/">Remembering Dave Taht (This guitar kills Vogons)</a></li>
+  <li><b>“旅途愉快，老朋友！”:</b> <a href="https://doc.searls.com/2025/04/01/remembering-dave-taht/#comment-33744">Doc Searls Weblog Comments (stu z)</a></li>
+  <li><b>Eric S. Raymond 的致敬 (2025):</b> <a href="https://x.com/esrtweet/status/1907401538093416621">X (Twitter) @esrtweet</a></li>
+  <li><b>John Carmack 的致敬 (2025):</b> <a href="https://x.com/ID_AA_Carmack/status/1907459628897587216">X (Twitter) @ID_AA_Carmack</a></li>
+  <li><b>“憨”字的哲学:</b> <a href="https://www.facebook.com/ashin555/videos/%E6%86%A8%E4%BA%BA/234790114390923/">五月天阿信 Facebook 贴文 (2020)</a></li>
+  <li><b>“憨人”神曲 - 五月天:</b>
+    <ul>
+      <li>🎸 <a href="https://www.youtube.com/watch?v=olGod8i1j1o">官方 Live 版 (相信音乐, 2020)</a></li>
+      <li>🎬 <a href="https://www.youtube.com/watch?v=1j_mpwKmlJg">官方 MV HD (滚石唱片, 2012)</a></li>
+      <li>🎧 <a href="https://www.youtube.com/watch?v=lYRDRtS55b8">纯音轨版 (Mayday - Topic, 2014)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
 ## 🏆全球首发！
 
 ## 🚀 改善网络延迟！TW641 移植 CAKE (sch_cake) Padavan 路由器固件：云端编译懒人包 (支持 142 款机型)

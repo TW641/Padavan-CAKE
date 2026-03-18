@@ -207,7 +207,7 @@
 </details>
 <br>
 
-<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img src="https://tw641.github.io/Mayday-Fool.jpg" alt="MAYDAY - Fool Live"></a><br>
+<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://tw641.github.io/Mayday-Fool.jpg" width="3840" height="2160" alt="MAYDAY - Fool Live"></a><br>
 <i>(🎧 Click the image to listen to the Live Version of "Fool")</i></p>
 
 <p>If his monumental work has ever improved your network, please honor this brilliant, selfless "Fool" by <b>Lighting up the "Star"</b> in the top-right corner of this repository.</p>

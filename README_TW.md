@@ -207,7 +207,7 @@
 </details>
 <br>
 
-<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img src="https://tw641.github.io/Mayday-Fool.jpg" alt="MAYDAY - Fool Live"></a><br>
+<p><a href="https://youtu.be/olGod8i1j1o" title="Click to play Mayday - Fool (Live Version)"><img style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;" src="https://tw641.github.io/Mayday-Fool.jpg" width="3840" height="2160" alt="MAYDAY - Fool Live"></a><br>
 <i>(🎧 點擊圖片聆聽《憨人》萬人合唱版)</i></p>
 
 <p>如果他這項不朽的傑作曾經改善過您的網路，請點擊這個專案右上角的 <b>"Star (星星)"</b> 來點亮它，以紀念這位才華橫溢、無私奉獻的「憨人」。</p>

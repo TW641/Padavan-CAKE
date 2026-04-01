@@ -49,8 +49,11 @@
         body { margin: 0; padding: 0; }
         .app-loading { text-align: center; padding-top: 15vh; color: var(--theme-color, #42b983); font-weight: bold; font-size: 1.2rem; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
-        @media screen and (min-width: 768px) { body:not(.close) main .content { left: 300px !important; transition: none !important; } }
-        body.ready { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
+        @media screen and (min-width: 768px) {
+            main { opacity: 0; animation: forceShow 0.1s 0.8s forwards; }
+            body:not(.close) main .content { left: 300px !important; transition: none !important; }
+        }
+        body.ready main { opacity: 1; animation: none; transition: opacity 0.15s ease-in; }
         @keyframes forceShow { to { opacity: 1; } }
         #app { min-height: 100vh; }
         body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
@@ -97,7 +100,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="app-loading"><h2 style="margin-bottom: 10px;">Padavan-CAKE 說明書</h2>載入中，請稍候...</div>
+        <div class="app-loading">載入中，請稍候...</div>
     </div>
 
     <script>

@@ -52,10 +52,11 @@
         @keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
         
         @media screen and (min-width: 768px) {
+            body { visibility: hidden; animation: showBody 0s 0.2s forwards; }
             body:not(.close) main .content { left: 300px !important; transition: none !important; }
             body:not(.close) .sidebar { transform: translateX(0) !important; transition: none !important; }
-            body:not(.ready) main * { transition: none !important; }
         }
+        @keyframes showBody { to { visibility: visible; } }
         
         #app { min-height: 100vh; }
         body, .markdown-section { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif !important; }
@@ -102,7 +103,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="app-loading">載入中，請稍候...</div>
+        <div class="app-loading" style="visibility: visible;">載入中，請稍候...</div>
     </div>
 
     <script>
